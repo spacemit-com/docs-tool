@@ -25,8 +25,6 @@ The following steps use **Windows 11** as an example.
 3. If Windows asks **“Do you want to allow this app from an unknown publisher to make changes to your device?”**, click **Yes**.
 4. If Windows shows **“Windows can’t verify the publisher of this driver software”**, choose **Always install this driver software**.
 
-![](static/HYjSbEKMMoaFyax0JXZctVwdngh.png)
-
 The following images show the installation flow.
 
 Choose the installation directory:
