@@ -1,6 +1,68 @@
 # 刷机工具使用手册
 
-## 1. 进入刷机模式
+## 1. 下载
+根据你的操作系统选择对应的版本：
+
+| 资源                                      | 平台     | ARCH       | 下载      |
+|-------------------------------------------|----------|------------|-----------|
+| TITANTOOLS FOR WINDOWS (X86\|X64) (INSTALLER) | WINDOWS  | X86\|X64   | Download  |
+| TITANTOOLS FOR LINUX X64 (64-BIT) (APPIMAGE)  | LINUX    | X64        | Download  |
+
+## 2. 安装
+
+### 2.1 PC 配置要求
+
+- 操作系统：Windows 或 Linux
+- C 盘空间（或 Linux 系统 Home 目录空间）需大于 10GB
+
+### 2.2 windows 安装
+
+以 Windows 11 为例。 以下步骤为开始安装:
+
+1. 下载最新版本的刷机工具 [titantools\_for\_windows.exe ](https://cloud.spacemit.com/prod-api/release/download/tools?token=titantools_for_windows_X86_X64)
+2. 双击已经下载好的刷机工具 **titantools\_for\_windows\_last** 开始安装；
+3. 如果系统提示 **你要允许来自未知发布者的此应用对你的设备进行更改吗？**选择 **是**；
+4. 如果系统提示**Windows 无法验证此驱动程序软件的发布者**，选择 **始终安装此驱动软件**， 如下图；
+
+![](static/HYjSbEKMMoaFyax0JXZctVwdngh.png)
+
+安装过程如下几图所示。
+
+选择安装位置，如下图。
+
+![](static/IaI5bYezbor2IixRVOGcfFMDn7e.png)
+
+安装中 ... 如下图。
+
+![](static/KfJwbLg7io8qGmxdphVcAb2Anpg.png)
+
+点击按键 **安装**，如下图。
+
+![](static/DSOZbGxoXoFAeKxapsfcqlXXnbg.png)
+
+点击按键 **完成** ，如下图，结束安装。
+
+![](static/YLVDb6gNEopoWyxuCz9cv3sMnCf.png)
+
+安装完成后，如下图所示，选择界面语言并启动工具
+
+![](static/HAjubxsPfodS5XxKK71coSPMn8e.png)
+
+## 2.3 Linux 上安装
+
+以 Ubuntu 为例。
+
+1. 下载最新版本的刷机工具 [titantools\_for\_linux.AppImage](https://cloud.spacemit.com/prod-api/release/download/tools?token=titantools_for_linux_64BIT_APPIMAGE)
+2. 赋予可执行权限
+3. 双击即可开始使用，无需安装
+
+> 注：如果启动失败报错："dlopen(): error loading libfuse.so.2" 可安装 libfuse 依赖:
+
+```
+sudo apt install libfuse2
+```
+
+## 3. 进入刷机模式
 
 以下以进迭空间产品 **MUSE Pi** 为例
 
@@ -27,9 +89,9 @@
 - **设备连接**
   通过靠近屏幕侧的 Type-C 接口（OTG 专用端口），将 MUSE Book 与主机电脑连接。
 
-## 2. 刷机过程
+## 4. 刷机过程
 
-### 2.1 工具首页
+### 4.1 工具首页
 
 1. 打开刷机工具，如果系统提示 **要允许来自未知发布者的此应用对你的设备进行更改吗？**，选择**是**。
 2. 如下图所示，工具右侧展示了四个主要功能模块：
@@ -42,7 +104,7 @@
 
 ![](static/BsvjbNLXyooFmRxKuVscoOfZnFx.png)
 
-### 2.2 研发工具
+### 4.2 研发工具
 
 在首页点击研发工具，跳转到研发工具界面。
 
@@ -162,9 +224,9 @@
 
 ![](static/V3s9bcnOPoR9pPxoDBTcLrS0nA0.png)
 
-## 3. 量产工具
+## 5. 量产工具
 
-### 3.1 多机烧录
+### 5.1 多机烧录
 
 如下图所示，点击进入量产工具页面，选择 **多机烧录**。
 
@@ -203,13 +265,13 @@
 5. 若打开调试信息选项，将出现如下窗口。
    ![](static/PvIMbJjsEoWiPlxbznxcGcSGnMb.png)
 
-### 3.2 制作量产卡
+### 5.2 制作量产卡
 
 linux 平台，如 ubuntu 等系统，暂不支持量产卡功能
 
 ![](static/IG7hb6qwno9Sv3xWWuacHgtrnlb.png)
 
-### 3.3 写号工具
+### 5.3 写号工具
 
 1. 点击量产工具选择**写号工具**
 
@@ -237,7 +299,7 @@ linux 平台，如 ubuntu 等系统，暂不支持量产卡功能
 
 ![](static/Vaalb4R2voz8akxJD8gcQQ0qnlK.png)
 
-## 4. 在线云设备
+## 6. 在线云设备
 
 用户可以通过此功能来进行远程设备管理。
 
@@ -247,13 +309,13 @@ linux 平台，如 ubuntu 等系统，暂不支持量产卡功能
 
 > 注：此功能在维护中
 
-## 5. 设置
+## 7. 设置
 
 下图为设置界面。
 
 ![](static/OMlubfPTToPJqlxDyjRcuRS1ncb.png)
 
-### 5.1 基础设置
+### 7.1 基础设置
 
 #### 当前工作空间
 
@@ -285,7 +347,7 @@ linux 平台，如 ubuntu 等系统，暂不支持量产卡功能
 
 点击选项 **English** 和 **中文** 可以切换此工具的使用语言
 
-### 5.2 关于 - 版本更新
+### 7.2 关于 - 版本更新
 
 点击**关于**，显示当前刷机工具套件的版本信息。
 
@@ -298,4 +360,3 @@ linux 平台，如 ubuntu 等系统，暂不支持量产卡功能
 ![](static/XI7Tbv4QiovXIoxKPDIc0c3mnoe.png)
 
 点击按键 **确定** 来开启版本更新。
-

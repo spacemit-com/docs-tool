@@ -1,301 +1,356 @@
-# 刷机工具使用手册
+# Flashing Tool User Manual
 
-## 1. 进入刷机模式
+## 1. Download
 
-以下以进迭空间产品 **MUSE Pi** 为例
+Select the appropriate version based on your operating system:
 
-- **设备未上电**，处于关机状态时：
+| Resource                                     | Platform | Architecture | Download |
+| -------------------------------------------- | -------- | ------------ | -------- |
+| TITANTOOLS FOR WINDOWS (X86|X64) (Installer) | Windows  | X86|X64      | Download |
+| TITANTOOLS FOR LINUX X64 (64-bit) (AppImage) | Linux    | X64          | Download |
 
-  1. 按住“下载（FDL）“按键不松开
-  2. 插上电源线
-  3. 松开“下载（FDL）“按键
-  4. 插上 USB 数据线到刷机 USB 连接器，即可扫描到设备
-- **设备已上电**，即设备已插上电源线上电，处于开机状态时：
+## 2. Installation
 
-  1. 按住 FDL 按键不松开；
-  2. 短按 Reset 键；
-  3. 松开 FDL 按键；
-  4. 插上 USB 数据线到刷机 USB 连接器，即可扫描到设备
+### 2.1 PC Requirements
 
-以下以进迭空间产品 **MUSE Book** 为例
+- **Operating System:** Windows or Linux
+- **Storage:** At least **10 GB** free space on the C: drive (Windows) or in the **Home** directory (Linux)
 
-- **激活 Fastboot 模式**
-  使用取卡针长按 MUSE Book 右侧小孔内的 Fastboot 按钮，同时按下电源键开机。
+### 2.2 Installing on Windows
 
-> _注：需确保取卡针完全插入小孔并持续按压 3 秒以上_
+The following steps use **Windows 11** as an example.
 
-- **设备连接**
-  通过靠近屏幕侧的 Type-C 接口（OTG 专用端口），将 MUSE Book 与主机电脑连接。
+1. Download the latest flashing tool: **titantools_for_windows.exe**.
+2. Double-click the downloaded file **titantools_for_windows_last** to start the installer.
+3. If Windows asks **“Do you want to allow this app from an unknown publisher to make changes to your device?”**, click **Yes**.
+4. If Windows shows **“Windows can’t verify the publisher of this driver software”**, choose **Always install this driver software**.
 
-## 2. 刷机过程
+![](static/HYjSbEKMMoaFyax0JXZctVwdngh.png)
 
-### 2.1 工具首页
+The following images show the installation flow.
 
-1. 打开刷机工具，如果系统提示 **要允许来自未知发布者的此应用对你的设备进行更改吗？**，选择**是**。
-2. 如下图所示，工具右侧展示了四个主要功能模块：
+Choose the installation directory:
 
-   - **研发工具**：单机烧录、卡启动。
-   - **量产工具**：多机烧录、制作量产卡，写号工具，多机写号。
-   - **在线云设备**：远程设备管理。
-   - **设置**：更新工具版本和更改语言。
-     点击不同的工具模块将跳转到对应的页面。
+![](static/locate.png)
 
-![](static/BsvjbNLXyooFmRxKuVscoOfZnFx.png)
+Click **Install**, Installer running:
 
-### 2.2 研发工具
+![](static/install.png)
 
-在首页点击研发工具，跳转到研发工具界面。
+Once the installation is complete, Titan Flasher can be launched by double-clicking its desktop icon.
 
-![](static/C2dvbwcW6ocj4fx0adiccQ7Mn6b.png)
+### 2.3 Installing on Linux
 
-#### 单机烧录
+The following steps use **Ubuntu** as an example.
 
-在研发工具页面有单机烧录选项和卡启动选项，这里选择单机烧录选项。
+1. Download the latest AppImage package: **titantools_for_linux.AppImage**.
+2. Grant the file executable permission.
+3. Double-click the AppImage to run it — no installation is required.
 
-![](static/WZsobnIwlojC0rxWyr9cGsF9nHE.png)
+**Note:**
+If the tool fails to start with the message
+```
+dlopen(): error loading libfuse.so.2
+```
 
-单机烧录流程如下：
+install the `libfuse2` package using:
 
-1. 确保设备进入**刷机模式**
+```
+sudo apt install libfuse2
+```
 
-> 注：扫描设备前确保设备进入刷机模式，否则无法扫描成功。
+## 3. Entering Flashing Mode
 
-2. 点击**扫描设备**，选择目标设备，如下图所示。
+The following uses the JDT Space product **MUSE Pi** as an example.
 
-![](static/KCt4byejyoBcNexkNo4crqtGnfh.png)
+**Device not powered on** (powered off):
 
-成功扫描到设备时，会出现下图类似的刷机序列号。
+  1. Press and hold the **Download (FDL)** button.
+  2. Plug in the power cable.
+  3. Release the **Download (FDL)** button.
+  4. Connect a USB data cable to the flashing USB connector. The device should now be detected.
 
-![](static/C9O3bLXx4oOFHyxFzLKcuAvznn2.png)
+**Device already powered on** (already connected to power):
 
-> 注：如下图所示，若存在多个设备，点击下拉按钮，即可进行设备选择。
+  1. Press and hold the FDL button.
+  2. Short-press the Reset button.
+  3. Release the FDL button.
+  4. Connect a USB data cable to the flashing USB connector. The device should now be detected.
 
-![](static/NiaubuyINozUnUx1bntc8jWPnn3.png)
+The following uses **MUSE Book** as an example.
 
-![](static/UA0WboKltonvBAxwDiAcP6Phnug.png)
+- **Activate Fastboot mode**
+  Use a SIM-eject pin to press and hold the Fastboot button hidden in the small hole on the right side of MUSE Book, then press the power button to start the device.
 
-3. 选择刷机文件（固件或解压目录）。
+> *Note: Make sure the pin is fully inserted and held for more than 3 seconds.*
 
-在识别到设备之后，如下图，选中位置可下拉选择文件路径来源。分别可以选择 **本地文件**、**本地目录**以及 **网络文件**。
+- **Device connection**
+  Use the Type-C port near the screen (the dedicated OTG port) to connect the MUSE Book to the host computer.
 
-![](static/YfipbDJkHoBS4Dxc0U7cFqd3n4b.png)
+## 4. Flashing Process
 
-4. 点击**开始刷机**，等待完成。
+### 4.1 Tool Home Page
 
-点击 **选择刷机文件**，选择固件，然后工具提示 **正在解压文件...**，耐心等待完成。（若需要配置分区，请浏览 **配置分区** 小节）
+1. Open the flashing tool. If the system prompts **“Allow this app from an unknown publisher to make changes to your device?”**, choose **Yes**.
+2. As shown below, the tool displays four main function modules on the right:
 
-![](static/Q5kTbsZLRotPwIx6Xgnc3pFEn1c.png)
+   - **Development Tools**: single-device flashing, SD-card boot
+   - **Mass Production Tools**: multi-device flashing, create production SD card, serial number writer
+   - **Online Cloud Devices**: remote device management
+   - **Settings**: tool update and language selection
 
-![](static/PpKHbrLdqos4sYxTJh5cqNOQnrR.png)
+Click any module to enter the respective interface.
 
-解压完成之后，下方显示刷机包名称
+![](static/home.png)
 
-![](static/UdXMbE8p1oJkaUxVAfxciy8Knhj.png)
+### 4.2 Development Tools
 
-5. **刷机完成后重新上电。**
+From the home page, click **Development Tools** to enter the Development Tools interface.
 
-点击 **开始刷机**，启动刷机，如下图。
+![](static/dev_tool.png)
 
-![](static/G84Vb8YnWosSlsxzzQWc2OMBnud.png)
+#### Single-Device Flashing
 
-刷机完成，重新上电即可进入系统。
+On the Development Tools page, there are two options: Single-Device Flashing and SD-Card Boot. Select **USB Download**.
 
-![](static/ZPghblBf9olAzWxlrj1cF0K7ndd.png)
+![](static/usb_download.png)
 
-#### 卡启动
+Single-Device Flashing process:
 
-在研发工具界面选择 **卡启动** 选项，进入卡启动配置界面。
+1. Ensure the device has entered **Flashing Mode**.
 
-> 注：Linux 系统（如 Ubuntu）暂不支持当前卡启动功能。
+> Note: The device must enter flashing mode before scanning, otherwise it cannot be detected.
+
+2. Click **Scan Device** and select the target device, as shown.
+
+![](static/scan.png)
+
+When the device is successfully detected, the flashing serial number will appear.
+
+![](static/detect.png)
+
+> Note: If multiple devices exist, use the dropdown to select one.
+
+![](static/detect2.png)
+
+3. Select the flashing package (firmware or extracted directory).
+
+After selecting the device, use the dropdown to choose the file source: **local file**, **local dir**, or **Network**.
+
+![](static/file.png)
+
+4. Click **Start Flashing** and wait.
+
+After selecting the flashing package, the tool will show **Extracting files…**. Please wait.
+
+![](static/start.png)
+
+After extraction, the firmware package name appears.
+
+![](static/packagename.png)
+
+5. **Reboot the device after flashing completes.**
+
+![](static/flashing.png)
+
+Flashing completes, then reboot to enter the system.
+
+![](static/complete.jpg)
+
+#### SD-Card Boot
+
+Select **SD-Card Boot** under the Development Tools interface.
+
+> Note: Linux systems (e.g., Ubuntu) do not support the SD-Card Boot feature.
 
 ![](static/CDljby5xno6KqlxHfoJcowXsn4f.png)
 
-卡启动的流程如下：
+SD-Card Boot process:
 
-1. **插入 SD 卡，点击 选择 SD 卡**
+1. Insert an SD card and click Select **SDCard Boot Disk**
 
-- 在卡启动页面点击选择 SD 卡。
-  > 注：在进行卡启动前，电脑需要插入 SD 卡。
+![](static/sdcard.png)
 
-![](static/FcoTbHKQWog9dKxDbnAcFiFLnHc.png)
+- A selection window will pop up. Choose the SD card.
 
-- 点击选择 SD 卡之后，会弹出下图界面，选择 sd 卡。
-  ![](static/DePzbXkCkoDI44xv4DscBp29nXd.png)
-- 选择 SD 卡之后，下图位置会显示选择的 SD 卡名称。
+  ![](static/sdselect.png)
 
-![](static/ITj7bUZ6LoaFwixAUoxcwpWXnXf.png)
+- After selection, the SD card name will be shown.
 
-2. 选择刷机包路径。
+  ![](static/sdselect2.png)
 
-- 选择 SD 卡之后，点击选择刷机包弹出下图选项，选择刷机包路径。
-  ![](static/DQpybc5vyoIKpjx523vcsmM9nDf.png)
-- 选择好刷机包之后，下图位置显示刷机包路径以及名称。
-  ![](static/W2Smb8FZ8oB2tfxpcR5cTOVUn2d.png)
+2. Select the flashing package path.
 
-3. 选择操作类型
-   选择刷机包之后，在下图位置选择需要进行的操作，默认选择烧录启动卡。
+![](static/sdselect3.png)
 
-> 注：烧录启动卡前需要格式化 SD 卡，请提前做好备份，以免数据丢失
+The selected package appears as shown:
 
-![](static/QmWFbtgnEodxglxjPJ0cICJ8nab.png)
+![](static/sdselect4.png)
 
-4. 点击 **执行**，等待烧录完成。
+3. Select operation type (default: Boot Card)
 
-- 点击**执行**后，会弹出下图窗口，点击确定后，等待解压压缩包完成。
-  ![](static/RxAhbQDHgooGrkxLw0FcsNU5nzc.png)
-- 解压完成之后，开始烧写，等待烧写结束即可。
-  ![](static/Jx22bhMLSoJdXkxhsWzcLvaynoU.png)
+> Note: Burning requires formatting the SD card. Back up important data first.
 
-#### 配置分区
+![](static/bootcard.png)
 
-1. 在选择好烧录设备以及烧录固件之后，可根据需要配置分区文件。
+4. Click **Start** and wait until finished.
 
-![](static/PsyWbMzHToaVPOxBPICcb8Sdnfh.png)
+![](static/start2.png)
 
-2. 开启配置分区文件后，会弹出以下窗口，可选择或替换对应的分区文件。
+![](static/runing.png)
 
-![](static/Cp5TbqQeeouIQoxHKEecHYwFnHP.png)
+#### Partition Configuration
 
-3. 在选择好分区文件之后，会出现以下内容。
+1. Once the device and flashing firmware are selected, you may configure partition files if needed.
 
-> 注：选择不同的分区文件，所对应的分区名会有所不一样，请确保分区文件不会产生冲突。
+2. Enable partition configuration to open the selection window.
 
-![](static/V3s9bcnOPoR9pPxoDBTcLrS0nA0.png)
+3. After selecting partition files, the following appears:
 
-## 3. 量产工具
+> Note: Partition names vary depending on the file. Ensure there are no conflicts.
 
-### 3.1 多机烧录
+## 5. Mass Production Tools
 
-如下图所示，点击进入量产工具页面，选择 **多机烧录**。
+### 5.1 Multi-Device Flashing
 
-> 注：多机烧录模式只支持 **zip 文件**。
+Click **Multi-USB Download** under Mass Production Tools.
 
-![](static/UQiUbmCWCoyqgbx3Knqc5njln8h.png)
+> Note: Multi-USB Download only supports **zip files**.
 
-1. 选择多机烧录，然后点击**选择刷机文件**，如下图。
+![](static/multi-usb.png)
 
-![](static/IwIJb39YrokXcMxQ0gBcsiHCnrg.png)
+1. Click **Select Zip File**.
 
-当选择好刷机文件并且解压完成之后，在下图位置显示解压好之后的文件路径。
+![](static/zip.png)
 
-![](static/FtSlbbFSioep95xRqPpcoozFnqe.png)
+After extraction, the file path appears here:
 
-2. 开启 USB 标定模式，绑定 USB 端口。
+![](static/zip2.png)
 
-- 点击开始多机烧录之后，会弹出多机烧录窗口，开启**USB 标定模式**，绑定 USB 端口。
-  ![](static/Lw12btzzuovYeVxdvVDcRmYanUf.png)
-- 绑定完成之后，下方显示对应的 USB 号。
-  ![](static/NVefbyd5uoKT45xLOL2cfsy4nBH.png)
-- USB 绑定之后，关闭 USB 标定模式，等待检查到设备。USB 标定模式可对设备标定 USB 号，用于检测对应 USB 的烧录情况。
-  ![](static/FzNebHxlroKugDxQjvzcCEQqnsg.png)
-- 若需要解除绑定，重新打开 USB 标定模式，点击下图按钮即可，解除之后可以重新进行标定。
-  ![](static/LShHbd9Aro3R4SxXB9JcMBmHnwh.png)
+2. Enable USB calibration mode and bind USB ports.
 
-3. 选择自动或手动烧录模式。
-   关闭 USB 标定模式，选择自动烧录或手动烧录，等待设备烧录完成。
-   **注：**
-   - 自动烧录模式即：若当前设备烧录完成之后，在不变更 USB 的情况下，继续使用该 USB 号连接新的设备时，继续烧录固件。
-   - 手动烧录模式即：当前设备烧录完成后，手动控制是否继续烧录固件。
-  ![](static/YRTVbQAp1o7P25xQ6sXcZMDPnUe.png)
+![](static/cali0.png)
 
-4. 烧录完成即可关闭窗口。
-   ![](static/PxD6bhsVuoeBVRxv0Inctcx4nue.png)
-5. 若打开调试信息选项，将出现如下窗口。
-   ![](static/PvIMbJjsEoWiPlxbznxcGcSGnMb.png)
+After binding, the USB number appears:
 
-### 3.2 制作量产卡
+![](static/cali1.png)
 
-linux 平台，如 ubuntu 等系统，暂不支持量产卡功能
+Disable USB calibration mode and wait for device detection.
 
-![](static/IG7hb6qwno9Sv3xWWuacHgtrnlb.png)
+![](static/cali2.png)
 
-### 3.3 写号工具
+To unbind, re-enable calibration mode and click the button:
 
-1. 点击量产工具选择**写号工具**
+![](static/cali3.png)
 
-![](static/LMQYbKXGQoveuTx1B2McngTsnub.png)
+3. Choose auto or manual flashing mode.
 
-2. 点击**扫描设备**成功识别设备序列号
+![](static/cali4.png)
 
-![](static/C54JbXLLmomghexSQTXcsye5nXg.png)
+4. Once flashing completes, close the window.
 
-3. 点击**配置自定义字段**进入设置
+![](static/cali5.png)
 
-![](static/XWgeb44Cbok7fKxsVTlcW7GRnBf.png)
+5. If debugging info is enabled, the window below appears.
 
-4. 启用需要写入的字段，不需要写入的字段禁用
+![](static/done.png)
 
-![](static/WroSbiUZPoYZC3xh96fcfR1In9c.png)
+### 5.2 Multi-SD Card Flashing
 
-5. 可以选择**随机 **或者** 自定义**
+Note. Currently, this option is not supported on Linux systems, such as Ubuntu.
 
-![](static/CmGvbFcgyoWjusxiSrscQaJSngg.png)
+### 5.3 Serial Number Writer
 
-6. 设置完毕后点击**开始写号**等待写号成功即可
+1. Under Mass Production Tools, select **Key Programming**.
 
-![](static/D1Q3bmvMOo4wayxe48gcDsSLnvh.png)
+![](static/key.png)
 
-![](static/Vaalb4R2voz8akxJD8gcQQ0qnlK.png)
+2. Click **Scan Device** to detect the device serial number.
 
-## 4. 在线云设备
+![](static/key1.png)
 
-用户可以通过此功能来进行远程设备管理。
+3. Click **Configure Custom Fields**.
 
-点击此选项过，就进入登录页面，如下图。
+![](static/key2.png)
 
-![](static/OqC0bit8aoYzgbxMdalcy1Y6nkX.png)
+4. Enable the fields that need to be written; disable those not needed.
 
-> 注：此功能在维护中
+![](static/key3.png)
 
-## 5. 设置
+5. Choose **Random** or **Custom**.
 
-下图为设置界面。
+![](static/key4.png)
+
+6. After configuration, click **Start Write** and wait for success.
+
+![](static/key-start.png)
+
+![](static/done2.png)
+
+## 6. Online Cloud Devices
+
+Users can manage devices remotely through this feature.
+
+Click the option to enter the login page:
+
+![](static/online.png)
+
+> Note: This feature is under maintenance.
+
+## 7. Settings
+
+The Settings interface is shown below:
 
 ![](static/OMlubfPTToPJqlxDyjRcuRS1ncb.png)
 
-### 5.1 基础设置
+### 7.1 Basic Settings
 
-#### 当前工作空间
+#### Current Workspace
 
-下图红圈位置显示当前的工作空间。
+The highlighted area below shows the current workspace:
 
-![](static/MMnBbR2lpo2O9cxdfBYcmt8Tnnf.png)
+![](static/setting.png)
 
-- 若需要更换工作空间，可点击**修改**，重新选择工作空间。
+- To change the workspace, click **Modify** and select a new location.
 
-![](static/EexHbopBEoYEfBxLoelcvK6jnrf.png)
+![](static/setting2.png)
 
-- **清理占用空间如下步骤**
+### Cleaning Workspace Storage
 
-  1. 下图红圈位置显示当前工作空间占用的大小。
-     ![](static/NftbbA55Poc2OpxNK22cRM29nwd.png)
-  2. 若点击**清理 **按键，将会弹出以下窗口，点击** Yes**，将清空当前工作空间的所有文件。
-     ![](static/GmVgbOYgIoALBHxUXOzc80TGn0f.png)
-  3. 清理完成，显示当前占用空间为 0GB。
-     ![](static/ZQ7Xb9zcKoXkDLx7Sinc8SQcnxg.png)
-- **自动清理**
-  自动清理功能会在**关闭工具时**自动清理工作空间中缓存的解压刷机文件。
+1. The highlighted area below displays the current storage usage of the workspace.
+   ![](static/clean.png)
 
-  - 若未开启此功能，解压的刷机包将不会自动清理，可能导致缓存文件越积越多，占用大量磁盘空间。
-  - 开启自动清理后，工具会在关闭时自动清理工作空间中的缓存文件，有效避免磁盘空间被过度占用。
+2. When you click **Clean**, a confirmation dialog appears. Click **Yes** to remove all files stored in the current workspace.
+   ![](static/clean2.png)
 
-![](static/EhXmbuN4BofcA4xBLYvcmbIMnhb.png)
+3. After cleaning, the workspace usage will show **0 GB**.
+   ![](static/clean3.png)
 
-#### 切换语言
+### Automatic Cleaning
 
-点击选项 **English** 和 **中文** 可以切换此工具的使用语言
+The **Automatic Cleaning** feature removes cached flashing files **when the tool is closed**.
 
-### 5.2 关于 - 版本更新
+- If this option is disabled, extracted flashing packages will remain in the workspace and may accumulate over time, consuming large amounts of disk space.
+- When enabled, the tool automatically clears cached files on exit, preventing unnecessary disk usage.
 
-点击**关于**，显示当前刷机工具套件的版本信息。
+![](static/autoclean.png)
 
-![](static/JMkQbUTyxoTK2FxKi9Gc4xYZn0d.png)
+### Language Switching
 
-如下图，点击**检测更新**，检验当前版本是否为最新版本，若不是最新版本，将会弹出提示：**有新版本更新，请下载最新版本！**。
+Click **English** or **中文** to switch the tool’s display language.
 
-![](static/L1sxbkJqJobW47xmlezcws7Jneg.png)
+### 7.2 About – Version Update
 
-![](static/XI7Tbv4QiovXIoxKPDIc0c3mnoe.png)
+Click **About** to view the current version of the flashing tool suite.
 
-点击按键 **确定** 来开启版本更新。
+![](static/about.png)
 
+Click **Check Update** to verify whether you are using the latest version.
+If an update is available, a message will appear: **A new version is available. Please download the latest version!**
+
+![](static/update.png)
+
+![](static/update1.png)
+
+Click **OK** to start the update process.
+![](static/update2.png)
