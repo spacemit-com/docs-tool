@@ -33,7 +33,7 @@ The steps below use **J-Link** as an example.
 2. In Zadig, open the **Options** menu and enable **List All Devices**.
 3. Locate the **J-Link** device in the list and update its driver to **WinUSB**.
 
-![](./static/KWz4bKN0eoVbAJxsjeMcVQmonSc.png)
+<img src="static/KWz4bKN0eoVbAJxsjeMcVQmonSc.png" alt="" width="600">
 
 4. After successful installation, the J-Link device will appear under **Universal Serial Bus devices** in Device Manager.
 
@@ -90,7 +90,7 @@ target remote <ip>:<port>
 - Run `info threads` to check whether all 8 threads (CPU cores) are in debug mode.
   Then continue using normal GDB commands.
 
-![](./static/WHchbmCwVoh4j0xtY4bczMt0nNb.png)
+<img src="static/WHchbmCwVoh4j0xtY4bczMt0nNb.png" alt="" width="600">
 
 - Example: view registers of CPU core `k1.cpu.3`:
 
@@ -99,7 +99,7 @@ thread 4
 info all-registers
 ```
 
-![](./static/Cuj8bNpw1oDk4IxGxN8c9TO5nAh.png)
+<img src="static/Cuj8bNpw1oDk4IxGxN8c9TO5nAh.png" alt="" width="500">
 
 ### 4.2 Debugging Using OpenOCD Commands in GDB
 
@@ -119,6 +119,6 @@ monitor targets 3
 monitor reg
 ```
 
-![](./static/ZCRUbDKaTokD4RxRvtFcuItynMh.png)
+<img src="static/ZCRUbDKaTokD4RxRvtFcuItynMh.png" alt="" width="400">
 
 

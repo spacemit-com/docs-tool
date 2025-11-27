@@ -29,11 +29,11 @@ The following images show the installation flow.
 
 Choose the installation directory:
 
-![](static/locate.png)
+<img src="static/locate.png" alt="" width="600">
 
 Click **Install**, Installer running:
 
-![](static/install.png)
+<img src="static/install.png" alt="" width="600">
 
 Once the installation is complete, Titan Flasher can be launched by double-clicking its desktop icon.
 
@@ -99,19 +99,19 @@ The following uses **MUSE Book** as an example.
 
 Click any module to enter the respective interface.
 
-![](static/home.png)
+<img src="static/home.png" alt="" width="600">
 
 ### 4.2 Development Tools
 
 From the home page, click **Development Tools** to enter the Development Tools interface.
 
-![](static/dev_tool.png)
+<img src="static/dev_tool.png" alt="" width="600">
 
 #### Single-Device Flashing
 
 On the Development Tools page, there are two options: Single-Device Flashing and SD-Card Boot. Select **USB Download**.
 
-![](static/usb_download.png)
+<img src="static/usb_download.png" alt="" width="600">
 
 Single-Device Flashing process:
 
@@ -121,39 +121,39 @@ Single-Device Flashing process:
 
 2. Click **Scan Device** and select the target device, as shown.
 
-![](static/scan.png)
+<img src="static/scan.png" alt="" width="600">
 
 When the device is successfully detected, the flashing serial number will appear.
 
-![](static/detect.png)
+<img src="static/detect.png" alt="" width="600">
 
 > Note: If multiple devices exist, use the dropdown to select one.
 
-![](static/detect2.png)
+<img src="static/detect2.png" alt="" width="600">
 
 3. Select the flashing package (firmware or extracted directory).
 
 After selecting the device, use the dropdown to choose the file source: **local file**, **local dir**, or **Network**.
 
-![](static/file.png)
+<img src="static/file.png" alt="" width="600">
 
 4. Click **Start Flashing** and wait.
 
 After selecting the flashing package, the tool will show **Extracting files…**. Please wait.
 
-![](static/start.png)
+<img src="static/start.png" alt="" width="600">
 
 After extraction, the firmware package name appears.
 
-![](static/packagename.png)
+<img src="static/packagename.png" alt="" width="600">
 
 5. **Reboot the device after flashing completes.**
 
-![](static/flashing.png)
+<img src="static/flashing.png" alt="" width="600">
 
 Flashing completes, then reboot to enter the system.
 
-![](static/complete.jpg)
+<img src="static/complete.png" alt="" width="600">
 
 #### SD-Card Boot
 
@@ -161,41 +161,38 @@ Select **SD-Card Boot** under the Development Tools interface.
 
 > Note: Linux systems (e.g., Ubuntu) do not support the SD-Card Boot feature.
 
-![](static/CDljby5xno6KqlxHfoJcowXsn4f.png)
-
 SD-Card Boot process:
 
 1. Insert an SD card and click Select **SDCard Boot Disk**
 
-![](static/sdcard.png)
+   <img src="static/sdcard.png" alt="" width="600">
 
 - A selection window will pop up. Choose the SD card.
 
-  ![](static/sdselect.png)
+  <img src="static/sdselect.png" alt="" width="600">
 
 - After selection, the SD card name will be shown.
 
-  ![](static/sdselect2.png)
+  <img src="static/sdselect2.png" alt="" width="600">
 
 2. Select the flashing package path.
 
-![](static/sdselect3.png)
+  <img src="static/sdselect3.png" alt="" width="600">
 
-The selected package appears as shown:
-
-![](static/sdselect4.png)
+  The selected package appears as shown:
+  <img src="static/sdselect4.png" alt="" width="600">
 
 3. Select operation type (default: Boot Card)
 
-> Note: Burning requires formatting the SD card. Back up important data first.
+  > Note: Burning requires formatting the SD card. Back up important data first.
 
-![](static/bootcard.png)
+  <img src="static/bootcard.png" alt="" width="600">
 
 4. Click **Start** and wait until finished.
 
-![](static/start2.png)
+   <img src="static/start2.png" alt="" width="600">
 
-![](static/runing.png)
+   <img src="static/runing.png" alt="" width="600">
 
 #### Partition Configuration
 
@@ -215,75 +212,70 @@ Click **Multi-USB Download** under Mass Production Tools.
 
 > Note: Multi-USB Download only supports **zip files**.
 
-![](static/multi-usb.png)
+<img src="static/multi-usb.png" alt="" width="600">
 
 1. Click **Select Zip File**.
 
-![](static/zip.png)
+   <img src="static/zip.png" alt="" width="600">
 
-After extraction, the file path appears here:
+   After extraction, the file path appears here:
 
-![](static/zip2.png)
+   <img src="static/zip2.png" alt="" width="600">
 
 2. Enable USB calibration mode and bind USB ports.
 
-![](static/cali0.png)
+   <img src="static/cali0.png" alt="" width="600">
 
-After binding, the USB number appears:
+   After binding, the USB number appears:
 
-![](static/cali1.png)
+   <img src="static/cali1.png" alt="" width="600">
 
-Disable USB calibration mode and wait for device detection.
+   Disable USB calibration mode and wait for device detection.
 
-![](static/cali2.png)
+   <img src="static/cali2.png" alt="" width="600">
 
-To unbind, re-enable calibration mode and click the button:
+   To unbind, re-enable calibration mode and click the button:
 
-![](static/cali3.png)
+   <img src="static/cali3.png" alt="" width="600">
 
 3. Choose auto or manual flashing mode.
 
-![](static/cali4.png)
+   <img src="static/cali4.png" alt="" width="600">
 
 4. Once flashing completes, close the window.
 
-![](static/cali5.png)
+   <img src="static/cali5.png" alt="" width="600">
 
 5. If debugging info is enabled, the window below appears.
 
-![](static/done.png)
+   <img src="static/done.png" alt="" width="600">
 
 ### 5.2 Multi-SD Card Flashing
 
-Note. Currently, this option is not supported on Linux systems, such as Ubuntu.
+**Note.** Currently, this option is not supported on Linux systems, such as Ubuntu.
 
 ### 5.3 Serial Number Writer
 
 1. Under Mass Production Tools, select **Key Programming**.
 
-![](static/key.png)
+   <img src="static/key.png" alt="" width="600">
 
 2. Click **Scan Device** to detect the device serial number.
-
-![](static/key1.png)
+   <img src="static/key1.png" alt="" width="600">
 
 3. Click **Configure Custom Fields**.
-
-![](static/key2.png)
+   <img src="static/key2.png" alt="" width="600">
 
 4. Enable the fields that need to be written; disable those not needed.
-
-![](static/key3.png)
+   <img src="static/key3.png" alt="" width="600">
 
 5. Choose **Random** or **Custom**.
-
-![](static/key4.png)
+   <img src="static/key4.png" alt="" width="600">
 
 6. After configuration, click **Start Write** and wait for success.
 
-![](static/key-start.png)
-
-![](static/done2.png)
+   <img src="static/key-start.png" alt="" width="600">
+   <img src="static/done2.png" alt="" width="600">
 
 ## 6. Online Cloud Devices
 
@@ -291,15 +283,11 @@ Users can manage devices remotely through this feature.
 
 Click the option to enter the login page:
 
-![](static/online.png)
+<img src="static/online.png" alt="" width="600">
 
 > Note: This feature is under maintenance.
 
 ## 7. Settings
-
-The Settings interface is shown below:
-
-![](static/OMlubfPTToPJqlxDyjRcuRS1ncb.png)
 
 ### 7.1 Basic Settings
 
@@ -307,22 +295,21 @@ The Settings interface is shown below:
 
 The highlighted area below shows the current workspace:
 
-![](static/setting.png)
+<img src="static/setting.png" alt="" width="600">
 
 - To change the workspace, click **Modify** and select a new location.
-
-![](static/setting2.png)
+   <img src="static/setting2.png" alt="" width="600">
 
 ### Cleaning Workspace Storage
 
 1. The highlighted area below displays the current storage usage of the workspace.
-   ![](static/clean.png)
+   <img src="static/clean.png" alt="" width="600">
 
 2. When you click **Clean**, a confirmation dialog appears. Click **Yes** to remove all files stored in the current workspace.
-   ![](static/clean2.png)
+   <img src="static/clean2.png" alt="" width="600">
 
 3. After cleaning, the workspace usage will show **0 GB**.
-   ![](static/clean3.png)
+   <img src="static/clean3.png" alt="" width="600">
 
 ### Automatic Cleaning
 
@@ -331,7 +318,7 @@ The **Automatic Cleaning** feature removes cached flashing files **when the tool
 - If this option is disabled, extracted flashing packages will remain in the workspace and may accumulate over time, consuming large amounts of disk space.
 - When enabled, the tool automatically clears cached files on exit, preventing unnecessary disk usage.
 
-![](static/autoclean.png)
+<img src="static/autoclean.png" alt="" width="600">
 
 ### Language Switching
 
@@ -341,14 +328,14 @@ Click **English** or **中文** to switch the tool’s display language.
 
 Click **About** to view the current version of the flashing tool suite.
 
-![](static/about.png)
+<img src="static/about.png" alt="" width="600">
 
 Click **Check Update** to verify whether you are using the latest version.
 If an update is available, a message will appear: **A new version is available. Please download the latest version!**
 
-![](static/update.png)
+<img src="static/update.png" alt="" width="600">
 
-![](static/update1.png)
+<img src="static/update1.png" alt="" width="600">
 
 Click **OK** to start the update process.
-![](static/update2.png)
+<img src="static/update2.png" alt="" width="600">
