@@ -24,7 +24,7 @@ K1 系列板子都内置了 JTAG 调试功能，要使其正常工作，需要 *
 - **步骤二**：在 Zadig 工具中，进入 **Options** 菜单中选中 **List All Devices**。
 - **步骤三**：检查设备列表，选择 J-Link 设备，更新成 WinUSB 驱动。
 
-![](./static/KWz4bKN0eoVbAJxsjeMcVQmonSc.png)
+<img src="static/KWz4bKN0eoVbAJxsjeMcVQmonSc.png" alt="" width="600">
 
 - **步骤四**：安装成功后，在设备管理器的通用串行总线设备中能看到 J-Link 设备。
 
@@ -70,7 +70,7 @@ target remote <ip>:<port>
 
 - 输入 `info threads` 查看 8 个线程是否已进入调试模式，每个线程代表一个 CPU 核。随后正常使用标准 GDB 命令调试即可。
 
-![](./static/WHchbmCwVoh4j0xtY4bczMt0nNb.png)
+<img src="static/WHchbmCwVoh4j0xtY4bczMt0nNb.png" alt="" width="600">
 
 - 例如，查看 CPU 核 `k1.cpu.3` 的 RISC-V 寄存器信息，可输入 `thread 4` 切换到 CPU 核 `k1.cpu.3`，然后输入 `info all-registers`。
   ```bash
@@ -78,7 +78,7 @@ target remote <ip>:<port>
   info all-registers
   ```
 
-![](./static/Cuj8bNpw1oDk4IxGxN8c9TO5nAh.png)
+<img src="static/Cuj8bNpw1oDk4IxGxN8c9TO5nAh.png" alt="" width="500">
 
 ### 4.2 使用 OpenOCD 命令调试
 
@@ -95,4 +95,4 @@ monitor targets 3
 monitor reg
 ```
 
-![](./static/ZCRUbDKaTokD4RxRvtFcuItynMh.png)
+<img src="static/ZCRUbDKaTokD4RxRvtFcuItynMh.png" alt="" width="400">
