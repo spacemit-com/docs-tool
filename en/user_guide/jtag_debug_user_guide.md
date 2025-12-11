@@ -120,5 +120,3 @@ monitor reg
 ```
 
 <img src="static/ZCRUbDKaTokD4RxRvtFcuItynMh.png" alt="" width="400">
-
-
