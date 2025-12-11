@@ -1,1 +1,3 @@
-# JTAG 调试工具
+# JTAG Debugging Tool
+
+[JTAG Debugging Tool User Guide](jtag_debug_user_guide.md)
