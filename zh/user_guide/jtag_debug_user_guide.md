@@ -1,3 +1,5 @@
+sidebar_position: 3
+
 # JTAG 调试工具使用手册
 
 ## 1. 下载

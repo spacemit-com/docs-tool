@@ -1,3 +1,5 @@
+sidebar_position: 2
+
 # Flashing Tool User Manual
 
 ## 1. Download

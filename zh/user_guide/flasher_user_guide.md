@@ -1,3 +1,5 @@
+sidebar_position: 2
+
 # 刷机工具使用手册
 
 ## 1. 下载

@@ -1,3 +1,5 @@
+sidebar_position: 3
+
 # JTAG Debugging Tool User Guide
 
 ## 1. Download
