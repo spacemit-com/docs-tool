@@ -5,7 +5,7 @@ sidebar_position: 3
 ## 1. 下载
 
 - **OpenOCD 下载路径**：<u>[https://archive.spacemit.com/tools/openocd](https://archive.spacemit.com/tools/openocd)</u>
-- **GDB**：包含在交叉编译工具链中，请参考[《交叉编译工具链使用手册》](https://developer.spacemit.com/documentation?token=S66mw1ouRio4dUkqGvkcw7LEnJh)
+- **GDB**：包含在交叉编译工具链中，请参考[《交叉编译工具链使用手册》](https://www.spacemit.com/community/document/info?lang=zh&nodepath=tools/user_guide/cross_compiler_user_guide.md)
 
 ## 2. 配置 JTAG 接口
 

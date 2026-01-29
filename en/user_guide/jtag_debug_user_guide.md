@@ -8,8 +8,7 @@ sidebar_position: 3
 
 - **GDB**:
   Included in the cross-compilation toolchain.
-  Please refer to the *Cross-Compilation Toolchain User Guide*:
-  [https://developer.spacemit.com/documentation?token=S66mw1ouRio4dUkqGvkcw7LEnJh](https://developer.spacemit.com/documentation?token=S66mw1ouRio4dUkqGvkcw7LEnJh)
+  Please refer to [Cross-Compilation Toolchain User Guide](https://www.spacemit.com/community/document/info?lang=zh&nodepath=tools/user_guide/cross_compiler_user_guide.md)
 
 ## 2. Configure the JTAG Interface
 
