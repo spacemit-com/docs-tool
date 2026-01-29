@@ -16,7 +16,7 @@ K1 系列板子都内置了 JTAG 调试功能，要使其正常工作，需要 *
 ### 2.1 配置硬件
 
 - **步骤一**：打开 J-Link 的外壳，将其中的跳线帽拔下，使得 J-Link 不对外供电。
-- **步骤二**：连接 JTAG 信号，检查引脚是否被使用，参考文档 [MUSE Pi 用户使用指南](https://developer.spacemit.com/documentation?token=ZugWwIVmkiGNAik55hzc4C3Ln6d) 中 **JTAG 调试接口** 信息。
+- **步骤二**：连接 JTAG 信号，检查引脚是否被使用，参考文档 [MUSE Pi 用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi/pi_user_guide.md) 中 **JTAG 调试接口** 信息。
 
 ### 2.2 配置 USB 驱动
 

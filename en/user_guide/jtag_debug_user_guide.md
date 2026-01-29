@@ -21,9 +21,7 @@ The steps below use **J-Link** as an example.
 
 1. Open the J-Link casing and remove the jumper cap to **disable power output** from J-Link.
 2. Connect the JTAG signals and check that the pins are correctly used.
-   Refer to the *MUSE Pi User Guide*:
-   JTAG Debug Interface section
-   [https://developer.spacemit.com/documentation?token=ZugWwIVmkiGNAik55hzc4C3Ln6d](https://developer.spacemit.com/documentation?token=ZugWwIVmkiGNAik55hzc4C3Ln6d)
+   Refer to the [MUSE Pi User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k1_muse_pi/pi_user_guide.md) about JTAG Debug Interface.
 
 ### 2.2 USB Driver Setup
 
