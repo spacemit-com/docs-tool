@@ -8,25 +8,10 @@ sidebar_position: 1
 
 左侧导航中选择 `工具` - `交叉编译工具链`，再选择适合的版本进行下载。
 
-<table>
-<tbody>
-<tr>
-<td><strong>工具链类型</strong></td>
-<td><strong>描述</strong></td>
-<td><strong>适用场景</strong></td>
-</tr>
-<tr>
-<td>`spacemit-toolchain-linux-glibc-x86_64-xxx`</td>
-<td>Linux 环境工具链，包含 glibc 库</td>
-<td>适用于 Linux 环境开发。带操作系统的，如基于Bianbu, Buildroot等开发，一般均选择此工具链</td>
-</tr>
-<tr>
-<td>`spacemit-toolchain-elf-newlib-x86_64-xxx`</td>
-<td>裸环境工具链，包含 newlibc 库</td>
-<td>适用于裸机环境开发，如开发小核固件，开发无OS的管理固件</td>
-</tr>
-</tbody>
-</table>
+| 工具链类型   | 描述    | 适用场景   |
+|-------------|---------|-----------|
+| `spacemit-toolchain-linux-glibc-x86_64-xxx`    | Linux 环境工具链，包含 glibc 库 | 适用于 Linux 环境开发。带操作系统的，如基于 Bianbu、Buildroot 等开发，一般均选择此工具链 |
+| `spacemit-toolchain-elf-newlib-x86_64-xxx`     | 裸环境工具链，包含 newlib 库   | 适用于裸机环境开发，如开发小核固件，开发无 OS 的管理固件                     |
 
 一般发布的工具链版本会同时带LLVM和GCC，共用C库。特殊版本只带GCC的，会在下载页面标注。
 
@@ -61,7 +46,8 @@ export PATH=<工具链解压路径>/bin:$PATH
 - `-mcpu=spacemit-x60`：使用 x60 调度和 Fusion 信息。
 - `-mcpu=spacemit-x100`：使用 x100 调度和 Fusion 信息。
 - `-mcpu=spacemit-a100`：使用 a100 调度和 Fusion 信息。
-- `-march=rv64gc_zba_zbb_zbc_zbs`：启用 gc 和 bitmanip 扩展指令。注意 march 参数可按实际需要启用的扩展进行组合。不指定则使用cpu默认或工具链默认配置。
+- `-march=rv64gc_zba_zbb_zbc_zbs`：启用 gc 和 bitmanip 扩展指令。
+  > 注意：`-march` 参数可按实际需要启用的扩展进行组合。不指定则使用 CPU 默认或工具链默认配置。
 - 更多信息可参考 [GCC 官方文档](https://gcc.gnu.org/onlinedocs/)。
 
 ### 3.2 LLVM 工具链
@@ -91,10 +77,11 @@ export PATH=<工具链解压路径>/bin:$PATH
 
 #### 编译参数说明
 
-- `-mcpu=spacemit-x60`：使用 x60 调度和 Fusion 信息。
-- `-mcpu=spacemit-x100`：使用 x100 调度和 Fusion 信息。
-- `-mcpu=spacemit-a100`：使用 a100 调度和 Fusion 信息。
+- `-mcpu=spacemit-x60`：使用 X60 调度和 Fusion 信息。
+- `-mcpu=spacemit-x100`：使用 X100 调度和 Fusion 信息。
+- `-mcpu=spacemit-a100`：使用 A100 调度和 Fusion 信息。
 - `-fuse-ld=lld`：使用 `lld` 链接器。
-- `-march=rv64gc_zba_zbb_zbc_zbs`：启用 gc 和 bitmanip 扩展指令。注意 march 参数可按实际需要启用的扩展进行组合。不指定则使用cpu默认或工具链默认配置。
+- `-march=rv64gc_zba_zbb_zbc_zbs`：启用 gc 和 bitmanip 扩展指令。
+  > 注意： `-march` 参数可按实际需要启用的扩展进行组合。不指定则使用 CPU 默认或工具链默认配置。
 - 更多信息可参考 [LLVM 官方文档](https://llvm.org/docs/)。
 
