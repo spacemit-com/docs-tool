@@ -4,7 +4,7 @@ sidebar_position: 1
 
 ## 1. Download
 
-Visit the [Resource Download Center](https://www.spacemit.com/community/resources-download).
+Visit the [Resource Download Center](https://www.spacemit.com/community/resources-download/Tools/Cross-compilation%20toolchain).
 
 In the left navigation panel, select **Tools → Cross Compilation Toolchain**, pick the appropriate version to download.
 

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 ## 1. 下载
 
-访问 [资源下载中心](https://www.spacemit.com/community/resources-download)
+访问 [资源下载中心](https://www.spacemit.com/community/resources-download/Tools/Cross-compilation%20toolchain)
 
 左侧导航中选择 `工具` - `交叉编译工具链`，再选择适合的版本进行下载。
 
