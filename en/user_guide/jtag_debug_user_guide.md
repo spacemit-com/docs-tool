@@ -4,7 +4,7 @@ sidebar_position: 3
 
 ## 1. Download
 
-- **OpenOCD download link**: <u>[https://archive.spacemit.com/tools/openocd](https://archive.spacemit.com/tools/openocd)</u>
+- **OpenOCD download**: <u>[JTAG Debugging Tool](https://spacemit.com/community/resources-download/Tools/JTAG%20debugging%20tool)</u>
 
 - **GDB**:
   Included in the cross-compilation toolchain.
