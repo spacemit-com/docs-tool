@@ -6,10 +6,10 @@ sidebar_position: 2
 
 Select the appropriate version based on your operating system:
 
-| Resource                                     | Platform | Architecture | Download |
-| -------------------------------------------- | -------- | ------------ | -------- |
-| TITANTOOLS FOR WINDOWS (X86|X64) (Installer) | Windows  | X86|X64      | Download |
-| TITANTOOLS FOR LINUX X64 (64-bit) (AppImage) | Linux    | X64          | Download |
+| Resource   | Platform | Architecture | Download |
+|------------|----------|------------|-----------|
+| TITANTOOLS FOR WINDOWS (X86\|X64) (INSTALLER) | WINDOWS  | X86\|X64   | [Download](https://cloud.spacemit.com/prod-api/release/download/tools?token=titantools_for_windows_X86_X64)  |
+| TITANTOOLS FOR LINUX X64 (64-BIT) (APPIMAGE)  | LINUX    | X64        | [Download](https://cloud.spacemit.com/prod-api/release/download/tools?token=titantools_for_linux_64BIT_APPIMAGE)  |
 
 ## 2. Installation
 
