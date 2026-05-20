@@ -341,3 +341,50 @@ If an update is available, a message will appear: **A new version is available. 
 
 Click **OK** to start the update process.
 <img src="static/update2.png" alt="" width="600">
+
+## 8. Command-Line Flashing Tool (flashserver)
+
+If Titanflasher GUI is unavailable, or if users prefer a command-line based flashing workflow, the **flashserver** tool can be used to perform firmware flashing operations.
+
+flashserver provides a CLI-based flashing solution suitable for automated environments, remote terminals, and headless systems.
+
+### 8.1 Obtaining flashserver
+
+#### Method 1: Direct Download
+
+Select the appropriate version for your operating system:
+
+- [Windows version](https://cdn-resource.spacemit.com/file/flash/flashserver.exe)
+- [macOS version](https://cdn-resource.spacemit.com/file/flash/flashserver.pkg)
+- [Linux version](https://cdn-resource.spacemit.com/file/flash/flashserver)
+
+#### Method 2: Export from Titanflasher
+
+As shown below, open **Settings** in Titanflasher and click **Export Command-Line Tool** to obtain flashserver.
+
+<img src="static/flashserver_download.png" alt="" width="800">
+
+### 8.2 flashserver Flashing Procedure (Windows)
+
+The flashserver workflow on macOS and Linux is generally the same as on Windows. You can follow the steps below as a reference.
+
+1. Place the downloaded flashserver executable in the flashing package directory, as shown below.
+
+   <img src="static/flashserver_00.png" alt="" width="300">
+
+2. Double-click the flashserver executable to launch the tool. The following command-line window will appear after startup.
+
+   <img src="static/flashserver_01.png" alt="" width="800">
+
+3. Connect the target development board or device.
+
+   For instructions on entering flashing mode, refer to the section [Entering Flashing Mode](#3-entering-flashing-mode).
+
+   Once the device is successfully detected, information similar to the following will be displayed:
+
+   ```text
+   --- Available ports:
+   --- 1: 1-2     `fastboot VID:PID=0x361c:0x1001 SER=dfu-dev`
+   ```
+
+   At the prompt `--- Enter port index or full name:`, enter the corresponding device number, for example `1`, to start flashing automatically.
