@@ -67,7 +67,7 @@ sudo apt install libfuse2
 
 ## 3. 进入刷机模式
 
-以下以进迭空间产品 **MUSE Pi** 为例
+以下以进迭时空产品 **MUSE Pi** 为例
 
 - **设备未上电**，处于关机状态时：
 
@@ -82,7 +82,7 @@ sudo apt install libfuse2
   3. 松开 FDL 按键；
   4. 插上 USB 数据线到刷机 USB 连接器，即可扫描到设备
 
-以下以进迭空间产品 **MUSE Book** 为例
+以下以进迭时空产品 **MUSE Book** 为例
 
 - **激活 Fastboot 模式**
   使用取卡针长按 MUSE Book 右侧小孔内的 Fastboot 按钮，同时按下电源键开机。
@@ -123,49 +123,49 @@ sudo apt install libfuse2
 
 1. 确保设备进入**刷机模式**
 
-> 注：扫描设备前确保设备进入刷机模式，否则无法扫描成功。
+   > 注：扫描设备前确保设备进入刷机模式，否则无法扫描成功。
 
 2. 点击**扫描设备**，选择目标设备，如下图所示。
 
-<img src="static/KCt4byejyoBcNexkNo4crqtGnfh.png" alt="" width="600">
+   <img src="static/KCt4byejyoBcNexkNo4crqtGnfh.png" alt="" width="600">
 
-成功扫描到设备时，会出现下图类似的刷机序列号。
+   成功扫描到设备时，会出现下图类似的刷机序列号。
 
-<img src="static/C9O3bLXx4oOFHyxFzLKcuAvznn2.png" alt="" width="600">
+   <img src="static/C9O3bLXx4oOFHyxFzLKcuAvznn2.png" alt="" width="600">
 
-> 注：如下图所示，若存在多个设备，点击下拉按钮，即可进行设备选择。
+   > 注：如下图所示，若存在多个设备，点击下拉按钮，即可进行设备选择。
 
-<img src="static/NiaubuyINozUnUx1bntc8jWPnn3.png" alt="" width="600">
+   <img src="static/NiaubuyINozUnUx1bntc8jWPnn3.png" alt="" width="600">
 
-<img src="static/UA0WboKltonvBAxwDiAcP6Phnug.png" alt="" width="600">
+   <img src="static/UA0WboKltonvBAxwDiAcP6Phnug.png" alt="" width="600">
 
 3. 选择刷机文件（固件或解压目录）。
 
-在识别到设备之后，如下图，选中位置可下拉选择文件路径来源。分别可以选择 **本地文件**、**本地目录**以及 **网络文件**。
+   在识别到设备之后，如下图，选中位置可下拉选择文件路径来源。分别可以选择 **本地文件**、**本地目录**以及 **网络文件**。
 
-<img src="static/YfipbDJkHoBS4Dxc0U7cFqd3n4b.png" alt="" width="600">
+   <img src="static/YfipbDJkHoBS4Dxc0U7cFqd3n4b.png" alt="" width="600">
 
 4. 点击**开始刷机**，等待完成。
 
-点击 **选择刷机文件**，选择固件，然后工具提示 **正在解压文件...**，耐心等待完成。（若需要配置分区，请浏览 **配置分区** 小节）
+   点击 **选择刷机文件**，选择固件，然后工具提示 **正在解压文件...**，耐心等待完成。（若需要配置分区，请浏览 **配置分区** 小节）
 
-<img src="static/Q5kTbsZLRotPwIx6Xgnc3pFEn1c.png" alt="" width="600">
+   <img src="static/Q5kTbsZLRotPwIx6Xgnc3pFEn1c.png" alt="" width="600">
 
-<img src="static/PpKHbrLdqos4sYxTJh5cqNOQnrR.png" alt="" width="600">
+   <img src="static/PpKHbrLdqos4sYxTJh5cqNOQnrR.png" alt="" width="600">
 
-解压完成之后，下方显示刷机包名称
+   解压完成之后，下方显示刷机包名称
 
-<img src="static/UdXMbE8p1oJkaUxVAfxciy8Knhj.png" alt="" width="600">
+   <img src="static/UdXMbE8p1oJkaUxVAfxciy8Knhj.png" alt="" width="600">
 
 5. **刷机完成后重新上电**
 
-点击 **开始刷机**，启动刷机，如下图。
+   点击 **开始刷机**，启动刷机，如下图。
 
-<img src="static/G84Vb8YnWosSlsxzzQWc2OMBnud.png" alt="" width="600">
+   <img src="static/G84Vb8YnWosSlsxzzQWc2OMBnud.png" alt="" width="600">
 
-刷机完成，重新上电即可进入系统。
+   刷机完成，重新上电即可进入系统。
 
-<img src="static/ZPghblBf9olAzWxlrj1cF0K7ndd.png" alt="" width="600">
+   <img src="static/ZPghblBf9olAzWxlrj1cF0K7ndd.png" alt="" width="600">
 
 #### 卡启动
 
@@ -179,53 +179,53 @@ sudo apt install libfuse2
 
 1. **插入 SD 卡，点击 选择 SD 卡**
 
-- 在卡启动页面点击选择 SD 卡。
-  > 注：在进行卡启动前，电脑需要插入 SD 卡。
+   - 在卡启动页面点击选择 SD 卡。
+   > 注：在进行卡启动前，电脑需要插入 SD 卡。
 
-<img src="static/FcoTbHKQWog9dKxDbnAcFiFLnHc.png" alt="" width="600">
+   <img src="static/FcoTbHKQWog9dKxDbnAcFiFLnHc.png" alt="" width="600">
 
-- 点击选择 SD 卡之后，会弹出下图界面，选择 sd 卡。
-  <img src="static/DePzbXkCkoDI44xv4DscBp29nXd.png" alt="" width="600">
+   - 点击选择 SD 卡之后，会弹出下图界面，选择 sd 卡。
+   <img src="static/DePzbXkCkoDI44xv4DscBp29nXd.png" alt="" width="600">
 
-- 选择 SD 卡之后，下图位置会显示选择的 SD 卡名称。
-  <img src="static/ITj7bUZ6LoaFwixAUoxcwpWXnXf.png" alt="" width="600">
+   - 选择 SD 卡之后，下图位置会显示选择的 SD 卡名称。
+   <img src="static/ITj7bUZ6LoaFwixAUoxcwpWXnXf.png" alt="" width="600">
 
 2. 选择刷机包路径。
 
-- 选择 SD 卡之后，点击选择刷机包弹出下图选项，选择刷机包路径。
-  <img src="static/DQpybc5vyoIKpjx523vcsmM9nDf.png" alt="" width="600">
+   - 选择 SD 卡之后，点击选择刷机包弹出下图选项，选择刷机包路径。
+   <img src="static/DQpybc5vyoIKpjx523vcsmM9nDf.png" alt="" width="600">
 
-- 选择好刷机包之后，下图位置显示刷机包路径以及名称。
-  <img src="static/W2Smb8FZ8oB2tfxpcR5cTOVUn2d.png" alt="" width="600">
+   - 选择好刷机包之后，下图位置显示刷机包路径以及名称。
+    <img src="static/W2Smb8FZ8oB2tfxpcR5cTOVUn2d.png" alt="" width="600">
 
 3. 选择操作类型
    选择刷机包之后，在下图位置选择需要进行的操作，默认选择烧录启动卡。
 
-> 注：烧录启动卡前需要格式化 SD 卡，请提前做好备份，以免数据丢失
+   > 注：烧录启动卡前需要格式化 SD 卡，请提前做好备份，以免数据丢失
 
-<img src="static/QmWFbtgnEodxglxjPJ0cICJ8nab.png" alt="" width="600">
+   <img src="static/QmWFbtgnEodxglxjPJ0cICJ8nab.png" alt="" width="600">
 
 4. 点击 **执行**，等待烧录完成。
 
-- 点击**执行**后，会弹出下图窗口，点击确定后，等待解压压缩包完成。
-  <img src="static/RxAhbQDHgooGrkxLw0FcsNU5nzc.png" alt="" width="600">
-- 解压完成之后，开始烧写，等待烧写结束即可。
-  <img src="static/Jx22bhMLSoJdXkxhsWzcLvaynoU.png" alt="" width="600">
+   - 点击**执行**后，会弹出下图窗口，点击确定后，等待解压压缩包完成。
+   <img src="static/RxAhbQDHgooGrkxLw0FcsNU5nzc.png" alt="" width="600">
+   - 解压完成之后，开始烧写，等待烧写结束即可。
+   <img src="static/Jx22bhMLSoJdXkxhsWzcLvaynoU.png" alt="" width="600">
 
 #### 配置分区
 
 1. 在选择好烧录设备以及烧录固件之后，可根据需要配置分区文件。
 
-  <img src="static/PsyWbMzHToaVPOxBPICcb8Sdnfh.png" alt="" width="600">
+   <img src="static/PsyWbMzHToaVPOxBPICcb8Sdnfh.png" alt="" width="600">
 
 2. 开启配置分区文件后，会弹出以下窗口，可选择或替换对应的分区文件。
-  <img src="static/Cp5TbqQeeouIQoxHKEecHYwFnHP.png" alt="" width="600">
+   <img src="static/Cp5TbqQeeouIQoxHKEecHYwFnHP.png" alt="" width="600">
 
 3. 在选择好分区文件之后，会出现以下内容。
 
-> 注：选择不同的分区文件，所对应的分区名会有所不一样，请确保分区文件不会产生冲突。
+   > 注：选择不同的分区文件，所对应的分区名会有所不一样，请确保分区文件不会产生冲突。
 
-<img src="static/V3s9bcnOPoR9pPxoDBTcLrS0nA0.png" alt="" width="600">
+   <img src="static/V3s9bcnOPoR9pPxoDBTcLrS0nA0.png" alt="" width="600">
 
 ## 5. 量产工具
 
@@ -238,28 +238,28 @@ sudo apt install libfuse2
 <img src="static/UQiUbmCWCoyqgbx3Knqc5njln8h.png" alt="" width="600">
 
 1. 选择多机烧录，然后点击**选择刷机文件**，如下图。
-  <img src="static/IwIJb39YrokXcMxQ0gBcsiHCnrg.png" alt="" width="600">
+   <img src="static/IwIJb39YrokXcMxQ0gBcsiHCnrg.png" alt="" width="600">
 
-  当选择好刷机文件并且解压完成之后，在下图位置显示解压好之后的文件路径。
-  <img src="static/FtSlbbFSioep95xRqPpcoozFnqe.png" alt="" width="600">
+   当选择好刷机文件并且解压完成之后，在下图位置显示解压好之后的文件路径。
+   <img src="static/FtSlbbFSioep95xRqPpcoozFnqe.png" alt="" width="600">
 
 2. 开启 USB 标定模式，绑定 USB 端口。
 
-- 点击开始多机烧录之后，会弹出多机烧录窗口，开启**USB 标定模式**，绑定 USB 端口。
-  <img src="static/Lw12btzzuovYeVxdvVDcRmYanUf.png" alt="" width="600">
-- 绑定完成之后，下方显示对应的 USB 号。
-  <img src="static/NVefbyd5uoKT45xLOL2cfsy4nBH.png" alt="" width="600">
-- USB 绑定之后，关闭 USB 标定模式，等待检查到设备。USB 标定模式可对设备标定 USB 号，用于检测对应 USB 的烧录情况。
-  <img src="static/FzNebHxlroKugDxQjvzcCEQqnsg.png" alt="" width="600">
-- 若需要解除绑定，重新打开 USB 标定模式，点击下图按钮即可，解除之后可以重新进行标定。
-  <img src="static/LShHbd9Aro3R4SxXB9JcMBmHnwh.png" alt="" width="600">
+   - 点击开始多机烧录之后，会弹出多机烧录窗口，开启**USB 标定模式**，绑定 USB 端口。
+    <img src="static/Lw12btzzuovYeVxdvVDcRmYanUf.png" alt="" width="600">
+   - 绑定完成之后，下方显示对应的 USB 号。
+    <img src="static/NVefbyd5uoKT45xLOL2cfsy4nBH.png" alt="" width="600">
+   - USB 绑定之后，关闭 USB 标定模式，等待检查到设备。USB 标定模式可对设备标定 USB 号，用于检测对应 USB 的烧录情况。
+   <img src="static/FzNebHxlroKugDxQjvzcCEQqnsg.png" alt="" width="600">
+   - 若需要解除绑定，重新打开 USB 标定模式，点击下图按钮即可，解除之后可以重新进行标定。
+    <img src="static/LShHbd9Aro3R4SxXB9JcMBmHnwh.png" alt="" width="600">
 
 3. 选择自动或手动烧录模式。
    关闭 USB 标定模式，选择自动烧录或手动烧录，等待设备烧录完成。
    **注：**
    - 自动烧录模式即：若当前设备烧录完成之后，在不变更 USB 的情况下，继续使用该 USB 号连接新的设备时，继续烧录固件。
    - 手动烧录模式即：当前设备烧录完成后，手动控制是否继续烧录固件。
-  <img src="static/YRTVbQAp1o7P25xQ6sXcZMDPnUe.png" alt="" width="600">
+   <img src="static/YRTVbQAp1o7P25xQ6sXcZMDPnUe.png" alt="" width="600">
 
 4. 烧录完成即可关闭窗口。
    <img src="static/PxD6bhsVuoeBVRxv0Inctcx4nue.png" alt="" width="600">
@@ -277,29 +277,29 @@ linux 平台，如 ubuntu 等系统，暂不支持量产卡功能
 
 1. 点击量产工具选择**写号工具**
 
-  <img src="static/LMQYbKXGQoveuTx1B2McngTsnub.png" alt="" width="600">
+   <img src="static/LMQYbKXGQoveuTx1B2McngTsnub.png" alt="" width="600">
 
 2. 点击**扫描设备**成功识别设备序列号
 
-  <img src="static/C54JbXLLmomghexSQTXcsye5nXg.png" alt="" width="600">
+   <img src="static/C54JbXLLmomghexSQTXcsye5nXg.png" alt="" width="600">
 
 3. 点击**配置自定义字段**进入设置
 
-  <img src="static/XWgeb44Cbok7fKxsVTlcW7GRnBf.png" alt="" width="600">
+   <img src="static/XWgeb44Cbok7fKxsVTlcW7GRnBf.png" alt="" width="600">
 
 4. 启用需要写入的字段，不需要写入的字段禁用
 
-  <img src="static/WroSbiUZPoYZC3xh96fcfR1In9c.png" alt="" width="600">
+   <img src="static/WroSbiUZPoYZC3xh96fcfR1In9c.png" alt="" width="600">
 
 5. 可以选择**随机 **或者** 自定义**
 
-  <img src="static/CmGvbFcgyoWjusxiSrscQaJSngg.png" alt="" width="600">
+   <img src="static/CmGvbFcgyoWjusxiSrscQaJSngg.png" alt="" width="600">
 
 6. 设置完毕后点击**开始写号**等待写号成功即可
 
-  <img src="static/D1Q3bmvMOo4wayxe48gcDsSLnvh.png" alt="" width="600">
+   <img src="static/D1Q3bmvMOo4wayxe48gcDsSLnvh.png" alt="" width="600">
 
-  <img src="static/Vaalb4R2voz8akxJD8gcQQ0qnlK.png" alt="" width="600">
+   <img src="static/Vaalb4R2voz8akxJD8gcQQ0qnlK.png" alt="" width="600">
 
 ## 6. 在线云设备
 
@@ -327,7 +327,7 @@ linux 平台，如 ubuntu 等系统，暂不支持量产卡功能
 
 - 若需要更换工作空间，可点击**修改**，重新选择工作空间。
 
-  <img src="static/EexHbopBEoYEfBxLoelcvK6jnrf.png" alt="" width="600">
+   <img src="static/EexHbopBEoYEfBxLoelcvK6jnrf.png" alt="" width="600">
 
 - **清理占用空间如下步骤**
 
@@ -362,3 +362,48 @@ linux 平台，如 ubuntu 等系统，暂不支持量产卡功能
 <img src="static/XI7Tbv4QiovXIoxKPDIc0c3mnoe.png" alt="" width="600">
 
 点击按键 **确定** 来开启版本更新。
+
+## 8. 命令行刷机工具（flashserver）
+
+当用户无法使用 Titanflasher 图形界面工具，或者更偏好使用命令行方式进行刷机时，可以使用 **flashserver** 工具完成刷机流程。
+
+flashserver 提供基于命令行的刷机能力，适用于自动化环境、远程终端以及无图形界面系统。
+
+### 8.1 获取 flashserver
+
+#### 方法一：直接下载
+
+根据操作系统选择对应版本：
+
+- [Windows 版本](https://cdn-resource.spacemit.com/file/flash/flashserver.exe)
+- [macOS 版本](https://cdn-resource.spacemit.com/file/flash/flashserver.pkg)
+- [Linux 版本](https://cdn-resource.spacemit.com/file/flash/flashserver)
+
+#### 方法二：通过 Titanflasher 导出
+
+如下图所示，在 Titanflasher 中选择 **设置**，点击 **导出命令行工具**，即可获取 flashserver。
+
+<img src="static/flashserver_download.png" alt="" width="800">
+
+### 8.2 flashserver 刷机流程（Windows）
+
+1. 将获取的 flashserver 程序放置到对应的刷机文件目录中，如下图所示。
+
+   <img src="static/flashserver_00.png" alt="" width="300">
+
+2. 双击运行 flashserver 程序，将弹出如下窗口，即可开始使用。
+
+   <img src="static/flashserver_01.png" alt="" width="800">
+
+3. 连接需要刷机的开发板或产品。
+
+   进入刷机模式的方法可参考章节 [进入刷机模式](#3-进入刷机模式)。
+
+   设备成功连接后，将显示如下信息：
+
+   ```text
+   --- Available ports:
+   --- 1: 1-2     `fastboot VID:PID=0x361c:0x1001 SER=dfu-dev`
+   ```
+
+   在 `--- Enter port index or full name:` 后输入对应设备编号，例如输入 `1`，即可自动开始刷机。
