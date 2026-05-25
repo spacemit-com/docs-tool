@@ -4,15 +4,15 @@ sidebar_position: 3
 
 ## 1. Download
 
-- **OpenOCD download**: <u>[JTAG Debugging Tool](https://spacemit.com/community/resources-download/Tools/JTAG%20debugging%20tool)</u>
+- **OpenOCD download**: [JTAG Debugging Tool](https://spacemit.com/community/resources-download/Tools/JTAG%20debugging%20tool)
 
 - **GDB**:
   Included in the cross-compilation toolchain.
-  Please refer to [Cross-Compilation Toolchain User Guide](https://www.spacemit.com/community/document/info?lang=zh&nodepath=tools/user_guide/cross_compiler_user_guide.md)
+  Please refer to [Cross-Compilation Toolchain User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=tools/user_guide/cross_compiler_user_guide.md)
 
 ## 2. Configure the JTAG Interface
 
-All K1-series boards include built-in JTAG debugging support.
+All K1/K3-series boards include built-in JTAG debugging support.
 To enable it, you need to complete **hardware setup** and **USB driver configuration**.
 
 The steps below use **J-Link** as an example.
@@ -21,7 +21,8 @@ The steps below use **J-Link** as an example.
 
 1. Open the J-Link casing and remove the jumper cap to **disable power output** from J-Link.
 2. Connect the JTAG signals and check that the pins are correctly used.
-   Refer to the [MUSE Pi User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k1_muse_pi/pi_user_guide.md) about JTAG Debug Interface.
+   - For K1, refer to the **JTAG Debug Interface** section in the [MUSE Pi User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k1_muse_pi/pi_user_guide.md).
+   - For K3, refer to the **Development & Debugging** section in the [K3 Hardware FAQ](https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/key_stone/k3/k3_hw/k3_hw_faq.md).
 
 ### 2.2 USB Driver Setup
 
@@ -31,14 +32,14 @@ The steps below use **J-Link** as an example.
    [https://zadig.akeo.ie/](https://zadig.akeo.ie/)
 2. In Zadig, open the **Options** menu and enable **List All Devices**.
 3. Locate the **J-Link** device in the list and update its driver to **WinUSB**.
-
-<img src="static/KWz4bKN0eoVbAJxsjeMcVQmonSc.png" alt="" width="600">
+  
+   <img src="static/KWz4bKN0eoVbAJxsjeMcVQmonSc.png" alt="" width="600">
 
 4. After successful installation, the J-Link device will appear under **Universal Serial Bus devices** in Device Manager.
 
-**Note**:
-If multiple drivers exist (e.g., SEGGER native driver), the OS may switch back to another driver after re-plugging the device.
-In that case, manually select **WinUSB** again from the list of available drivers.
+> **Note**:
+> If multiple drivers exist (e.g., SEGGER native driver), the OS may switch back to another driver after re-plugging the device.
+> In that case, manually select **WinUSB** again from the list of available drivers.
 
 #### Linux
 
@@ -55,7 +56,7 @@ udevadm control --reload
 ## 3. Running OpenOCD
 
 1. Extract the downloaded OpenOCD package.
-2. In the `bin` directory, double-click **spacemit_k1_2x4** to start OpenOCD.
+2. Using K1 X60 CPU as an example, double-click the `k1.bat` (Windows) or `k1.sh` (Linux) script in the `bin` directory to start OpenOCD.
 3. To change runtime parameters, edit the startup script.
    Example (Linux):
 
@@ -64,17 +65,25 @@ udevadm control --reload
 
 SCRIPT_DIR="../share/openocd/scripts"
 
-./openocd -c "set CORES 8" \
-          -f $SCRIPT_DIR/interface/jlink.cfg \
-          -f $SCRIPT_DIR/target/spacemit-k1.cfg \
-          -c "gdb_port 1024"
+# ADAPTER_DRIVER can set as jlink cmsis-dap ...
+ADAPTER_DRIVER=jlink
+
+./openocd -c "bindto 0.0.0.0" -c "gdb port 1024" -c "telnet port 4444" \
+          -c "set SPEED 8000" \
+          -c "set SECJTAG 0" \
+          -c "set TARGET acpu" \
+          -c "set CLUSTERS {0 1}" \
+          -c "set CLUSTER0_COREIDS {0 1 2 3}" \
+          -c "set CLUSTER1_COREIDS {0 1 2 3}" \
+          -f $SCRIPT_DIR/interface/$ADAPTER_DRIVER.cfg \
+          -f scripts/spacemit-k1.cfg
 ```
 
 - `-f` loads configuration files for the J-Link adapter and the K1 target.
 - `-c` sets OpenOCD options, such as:
-
-  - GDB debug port (`gdb_port 1024`)
-  - Number of cores to debug (`CORES`)
+  - `gdb port 1024` — sets the GDB debug port.
+  - `TARGET` — set to `rcpu` or other values to switch the debug target between `RCPU` and `X60`.
+  - `CLUSTER*` — specifies which X60 CPU clusters and cores to debug.
 
 ## 4. Debugging with GDB
 
@@ -102,14 +111,14 @@ info all-registers
 
 ### 4.2 Debugging Using OpenOCD Commands in GDB
 
-- Use `monitor` commands inside GDB.
+- Use the `monitor` command inside GDB to invoke OpenOCD commands.
   For example, check whether all 8 CPU cores are in the **halted** state:
 
 ```bash
 monitor targets
 ```
 
-- Continue using standard OpenOCD commands.
+- Then continue using standard OpenOCD commands.
 
 - Example: switch to CPU core `k1.cpu.3` and read its registers:
 
