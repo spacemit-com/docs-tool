@@ -9,14 +9,15 @@ sidebar_position: 3
 
 ## 2. 配置 JTAG 接口
 
-K1 系列板子都内置了 JTAG 调试功能，要使其正常工作，需要 **设置硬件** 和 **配置 USB 驱动**。
+K1/K3 系列板子都内置了 JTAG 调试功能，要使其正常工作，需要 **设置硬件** 和 **配置 USB 驱动**。
 
 以 J-Link 为例，具体步骤如下。
 
 ### 2.1 配置硬件
 
 - **步骤一**：打开 J-Link 的外壳，将其中的跳线帽拔下，使得 J-Link 不对外供电。
-- **步骤二**：连接 JTAG 信号，检查引脚是否被使用，参考文档 [MUSE Pi 用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi/pi_user_guide.md) 中 **JTAG 调试接口** 信息。
+- **步骤二**：连接 JTAG 信号，检查引脚是否被使用，K1请参考文档 [MUSE Pi 用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi/pi_user_guide.md) 中 **JTAG 调试接口** 信息。
+  K3请参考参考文档 [K3 硬件方案 FAQ](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/key_stone/k3/k3_hw/k3_hw_faq.md) 中 **开发调试** 信息。
 
 ### 2.2 配置 USB 驱动
 
@@ -46,7 +47,7 @@ udevadm control --reload
 ## 3. 运行 OpenOCD
 
 - **步骤一**：解压缩下载的 OpenOCD 文件。
-- **步骤二**：双击运行 `bin` 目录下的 `spacemit_k1_2x4` 脚本启动 OpenOCD。
+- **步骤二**：以K1 X60 CPU 为例，双击运行 `bin` 目录下的 `k1.bat/sh` 脚本启动 OpenOCD。
 - **步骤三**：如需修改运行参数，可编辑对应的脚本，以 Linux 版本为例：
 
 ```bash
@@ -54,11 +55,22 @@ udevadm control --reload
 
 SCRIPT_DIR="../share/openocd/scripts"
 
-./openocd -c "set CORES 8" -f $SCRIPT_DIR/interface/jlink.cfg -f $SCRIPT_DIR/target/spacemit-k1.cfg -c "gdb_port 1024"
+# ADAPTER_DRIVER can set as jlink cmsis-dap ...
+ADAPTER_DRIVER=jlink
+
+./openocd -c "bindto 0.0.0.0" -c "gdb port 1024" -c "telnet port 4444" \
+          -c "set SPEED 8000" \
+          -c "set SECJTAG 0" \
+          -c "set TARGET acpu" \
+          -c "set CLUSTERS {0 1}" \
+          -c "set CLUSTER0_COREIDS {0 1 2 3}" \
+          -c "set CLUSTER1_COREIDS {0 1 2 3}" \
+          -f $SCRIPT_DIR/interface/$ADAPTER_DRIVER.cfg \
+          -f scripts/spacemit-k1.cfg
 ```
 
 - `-f` 选项后跟的是 J-Link 适配器和 K1 的配置文件。
-- `-c` 选项是 OpenOCD 的配置项目，如配置了 GDB 的调试端口号为 1024，以及通过修改 `CORES` 变量设置调试核心数。
+- `-c` 选项是 OpenOCD 的配置项目，如 `gdb port 1024` 配置了 GDB 的调试端口号，`TARGET` 变量设置为 `rcpu` 或其他，可以改变调试目标为 `RCPU` 或 `X60`，`CLUSTER*` 变量可以设置调试特定的X60 CPU。
 
 ## 4. 使用 GDB 调试
 
