@@ -255,7 +255,7 @@ Click **Multi-USB Download** under Mass Production Tools.
 
 ### 5.2 Multi-SD Card Flashing
 
-> **Note.** Currently, this option is not supported on Linux systems, such as Ubuntu.
+> **Note:** Currently, this option is not supported on Linux systems, such as Ubuntu.
 
 ### 5.3 Serial Number Writer
 

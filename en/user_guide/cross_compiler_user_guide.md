@@ -54,7 +54,7 @@ export PATH=<path-to-toolchain>/bin:$PATH
 
 - `-march=rv64gc_zba_zbb_zbc_zbs`
   Enables the GC base ISA with Bitmanip extensions.
-  > Note: The `-march` option can be customized by combining extensions as needed.If not specified, the default configuration of the CPU or toolchain will be used.
+  > Note: The `-march` option can be customized by combining extensions as needed. If not specified, the default configuration of the CPU or toolchain will be used.
 
 - For more details, refer to the [GCC official documentation](https://gcc.gnu.org/onlinedocs/)
 
@@ -99,7 +99,7 @@ export PATH=<path-to-toolchain>/bin:$PATH
   Uses the LLVM `lld` linker.
 
 - `-march=rv64gc_zba_zbb_zbc_zbs`
-  Enables the *GC base ISA with Bitmanip extensions.
+  Enables the GC base ISA with Bitmanip extensions.
   > Note: The `-march` option can be customized as needed. If not specified, the default CPU or toolchain configuration will be used.
 
 - For more information, refer to the [LLVM official documentation](https://llvm.org/docs/).
