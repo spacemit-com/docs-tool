@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # 工具使用手册
 
 - [交叉编译工具链使用手册](cross_compiler_user_guide.md)
