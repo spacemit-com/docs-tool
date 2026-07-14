@@ -8,7 +8,9 @@ sidebar_position: 2
 
 ## 访问 SpacemiT Studio
 
-在浏览器中打开 **[SpacemiT Studio](https://studio.spacemit.com/)** 即可开始使用。
+在浏览器中打开 **[SpacemiT Studio](https://studio.spacemit.com/)**。
+
+Note: You must sign in to access the Studio interface. If you are not signed in, you will be redirected to the login page — sign in with an existing account or register via phone/email before using the Studio.
 
 ## 安装驱动
 
