@@ -8,7 +8,32 @@ sidebar_position: 2
 
 ## 访问 SpacemiT Studio
 
-在浏览器中打开 **[SpacemiT Studio](https://studio.spacemit.com/)** 即可开始使用。
+在浏览器中打开 **[SpacemiT Studio](https://studio.spacemit.com/)**。
+
+> 注意：需要先登录账号才能进入 Studio 主界面。未登录时会被重定向到登录页面。
+
+## 登录
+
+### 注册账号
+
+如果还没有账号，请按照以下步骤注册。当前平台支持以下注册方式：
+
+- 手机号注册（目前仅支持中国国内手机号）
+  <img src="./static/reg_phone.png" alt="手机号注册" width="400">
+
+- 邮箱注册
+  <img src="./static/reg_email.png" alt="邮箱注册" width="400">
+
+注册完成后，点击 **立即登录** 进入登录页面。
+
+### 登录方式
+
+您可以使用以下方式登录：
+
+- 短信登录（手机验证码）
+- 密码登录
+
+  <img src="./static/login.png" alt="登录界面" width="400">
 
 ## 安装驱动
 
@@ -28,8 +53,13 @@ sidebar_position: 2
 
 ![首页 - 驱动已安装](./static/initial_00.png)
 
-> 注：各平台的驱动安装包也可以通过以下链接手动下载并安装。
-> TBD
+> 注：各平台的驱动安装包也可以通过以下链接手动下载并安装：
+> 
+> ![驱动下载链接](./static/driver.png)
+> 
+> - **Windows 版本**：[下载 Windows 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Windows)
+> - **Linux 版本**：[下载 Linux 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Linux)
+> - **macOS 版本**：[下载 macOS 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Darwin)
 
 ## 界面导航
 
@@ -52,32 +82,9 @@ sidebar_position: 2
 
 | # | 图标名称 | 说明 |
 |------|------|------|
-| 7 | **[登录](#登录)** | 用户账号登录入口 |
+| 7 | **用户** | 查看和编辑用户个人资料 |
 | 8 | **语言** | 切换界面显示语言，支持中文 / 英文 |
 | 9 | **[设置](./user_guide/settings.md)** | 打开应用设置 |
-
-#### 登录
-
-**注册账号**
-
-如果还没有账号，点击 **登录** 进入注册流程。
-
-当前平台支持以下注册方式：
-
-- 手机号注册（目前仅支持中国国内手机号）
-  <img src="./static/reg_phone.png" alt="手机号注册" width="400">
-
-- 邮箱注册
-  <img src="./static/reg_email.png" alt="邮箱注册" width="400">
-
-注册完成后，点击 **立即登录** 进入登录页面。
-
-平台支持以下登录方式：
-
-- 短信登录
-- 密码登录
-
-  <img src="./static/login.png" alt="登录界面" width="400">
 
 ### 顶部工具栏（Topbar）
 
@@ -90,7 +97,7 @@ sidebar_position: 2
 | 14 | **收起侧栏** | 隐藏 / 显示左侧导航栏 |
 | 15 | **收起 AI 面板** | 隐藏 / 显示右侧 AI 助手面板 |
 | 16 | **文档** | 跳转至进迭时空的官方文档中心 |
-| 17 | **意见反馈** | 打开反馈弹窗，提交问题、建议或异常日志 |
+| 17 | **[意见反馈](#意见反馈)** | 打开反馈弹窗，提交问题、建议或异常日志 |
 
 #### 意见反馈
 
