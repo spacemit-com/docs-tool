@@ -8,7 +8,7 @@ sidebar_position: 1
 
 通过 USB 刷机模式将系统镜像直接写入设备的内置存储，适用于单台设备的系统安装或更新。
 
-### 前置条件
+### 单机烧录 - 前置条件
 
 - 已安装对应平台的 SpacemiT Studio 驱动（参考[快速入门](../../quick_start.md)）
 - 设备已通过 USB 线连接至电脑
@@ -25,7 +25,7 @@ sidebar_position: 1
 | K3 | CoM260 Kit | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k3_com260/com260_user_guide.md) |
 | K3 | Pico-ITX | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k3_pico/root_overview.md) |
 
-### 操作步骤
+### 单机烧录 - 操作步骤
 
 1. 进入 **开发工具 → 单机烧录**
 

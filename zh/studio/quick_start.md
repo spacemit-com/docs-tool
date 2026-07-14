@@ -24,16 +24,21 @@ sidebar_position: 2
 - 邮箱注册
   <img src="./static/reg_email.png" alt="邮箱注册" width="400">
 
-注册完成后，点击 **立即登录** 进入登录页面。
+注册完成后，进入登录页面。
+> 若不注册，可使用第三方账号直接关联登录
 
 ### 登录方式
 
 您可以使用以下方式登录：
+<img src="./static/login.png" alt="登录界面" width="400">
 
 - 短信登录（手机验证码）
 - 密码登录
-
-  <img src="./static/login.png" alt="登录界面" width="400">
+- 第三方账号登录（无需单独注册）
+  - 微信账号
+  - QQ 账号
+  - GitHub 账号
+  - Gitee 账号
 
 ## 安装驱动
 
@@ -54,9 +59,9 @@ sidebar_position: 2
 ![首页 - 驱动已安装](./static/initial_00.png)
 
 > 注：各平台的驱动安装包也可以通过以下链接手动下载并安装：
-> 
+>
 > ![驱动下载链接](./static/driver.png)
-> 
+>
 > - **Windows 版本**：[下载 Windows 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Windows)
 > - **Linux 版本**：[下载 Linux 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Linux)
 > - **macOS 版本**：[下载 macOS 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Darwin)
