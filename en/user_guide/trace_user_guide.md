@@ -58,25 +58,23 @@ Before using Trace, the corresponding Trace components must be configured, inclu
 RISC-V Trace components include **Encoder** ，**ATB Bridge** and **Funnel** . Abstract entities can be created using the `rvtrace create` command：
 
 ```Bash
-rvtrace create <name> <type> -target <target_name> -baseaddr <address>
-rvtrace create <name> <type> -dap <dap_name*>* -ap-num <apn>
+rvtrace create <name> <type> -target <target_name> -base <address>
+rvtrace create <name> <type> -dap <dap_name*>* -ap-num <apn> -baseaddr <address>
 @type：encoder atbbridge funnel
 ```
 
-Note：When executing the `rvtrace create` command, one of the following parameters must be specified:
+Note：When executing the `rvtrace create` command, one of the following two combination parameters must be specified:
 
-- `-dap dap_name` 
+- `-target target_name` `-base addr` (Control the trace components via RISC-V target, K3 only supports this method)
 
-- `-ap-num apn` 
-
-- `-target target_name`（K3 only supports this method, controlling the Trace component via DM.）
+- `-dap dap_name` `-ap-num apn` `-baseaddr addr` (Control the trace components via ARM DAP)
 
 
 
 Trace Encoder Configuration：The Trace Encoder control the relevant configurations defined in its supported specs. Please refer to:
 
 ```Plain Text
-rvtrace create encoder0 encoder -target $_TARGETNAME.$_coreid  -baseaddr 0xd9002000
+rvtrace create encoder0 encoder -target $_TARGETNAME.$_coreid  -base 0xd9002000
 encoder0 configure ...
 @-inst-mode: Instruction trace generation mode (off|resv1|resv2|btm|resv4|resv5|htm|resv7, btm(Branch Trace Messaging) and htm(History Trace Messaging), k3 support only btm)
 @-context: Controls generation of Ownership messages (on|off)
@@ -118,26 +116,24 @@ If  `-timestamp on` is specified, the parameters of the Funnel's Timestamp subco
 Coresight Trace components include **Funnel** ，**TMC** and **Timestamp** types. These components can be instantiated as logical entities using the cstrace create command.
 
 ```Bash
-cstrace create <name> <type> -target <target_name> -baseaddr <address>
-rvtrace create <name> <type> -dap <dap_name*>* -ap-num <apn>
+cstrace create <name> <type> -target <target_name> -base <address>
+rvtrace create <name> <type> -dap <dap_name*>* -ap-num <apn> -baseaddr <address>
 @type：funnel tmc timestamp
 ```
 
-Note： The following configurations are required when executing the `cstrace create` command:
+Note： one of the following two combination parameters are required when executing the `cstrace create` command:
 
-- `-dap dap_name`
+- `-target target_name` `-base addr` (Control the trace components via RISC-V target, K3 only supports this method)
 
-- `-ap-num apn` 
-
-- `-target target_name`（K3 only supports this method, controlling the Trace component via DM.）
+- `-dap dap_name` `-ap-num apn` `-baseaddr addr` (Control the trace components via ARM DAP)
 
 
 
 Funnel Configuration：The`-ports` parameter must be specified to enable input ports for receiving output data from each Cluster:
 
 ```Bash
-cstrace create main_funnel funnel -target $_TARGETNAME -baseaddr 0xd9042000 -ports 0x1
-# cstrace create main_funnel funnel -target $_TARGETNAME -baseaddr 0xd9042000
+cstrace create main_funnel funnel -target $_TARGETNAME -base 0xd9042000 -ports 0x1
+# cstrace create main_funnel funnel -target $_TARGETNAME -base 0xd9042000
 # main_funnel configure -ports 0x1
 ```
 
@@ -151,8 +147,8 @@ TMC Configuration：
 - For the ETR type, the trace buffer address and size must also be configured.
 
 ```Bash
-cstrace create etf tmc -target $_TARGETNAME -baseaddr 0xd9043000 -tmc-type etf
-cstrace create etr tmc -target $_TARGETNAME -baseaddr 0xd9043000 -tmc-type etr
+cstrace create etf tmc -target $_TARGETNAME -base 0xd9043000 -tmc-type etf
+cstrace create etr tmc -target $_TARGETNAME -base 0xd9043000 -tmc-type etr
 etr configure -hwaddr 0x170000000 -buf-size 0x1000000
 @-tmc-type：etb etf etr
 ```
@@ -272,8 +268,8 @@ K3 now supports writing PID into scontext CSR during scheduling in multi process
 Upon S-mode exit, the Trigger mechanism asserts Trace-notify and emits both a full PC packet and an Ownership packet, providing the information required for accurate trace reconstruction.
 
 ```Bash
-liangzhen@snode5:~/WorkSpace2/k3-trace-sysfs$ riscv64-unknown-elf-objdump -d linux-6.12/vmlinux > vmlinux.objdump
- liangzhen@snode5:~/WorkSpace2/k3-trace-sysfs$ grep sret vmlinux.objdump
+$ riscv64-unknown-elf-objdump -d linux-6.12/vmlinux > vmlinux.objdump
+$ grep sret vmlinux.objdump
 ffffffff8027963c:       10200073                sret
 ffffffff80279776:       10200073                sret
 
@@ -300,15 +296,6 @@ Location:                                                                       
             -> Coresight generic TMC driver (CORESIGHT_LINK_AND_SINK_TMC [=y])
           -> RISC-V Trace Support (RVTRACE [=y])
             -> RISCV Trace Encoder driver (RVTRACE_ENCODER [=y])
-```
-
-At present, K3 does not fully support `CPUILDE`. It must be disabled before Trace functionality can be used.
-
-```Plain Text
-Location: 
-    -> CPU Power Management
-      -> CPU Idle
-        -> CPU idle PM support (CPU_IDLE [=n])
 ```
 
 #### 3.2.2 Trace Control
@@ -689,11 +676,11 @@ root@k3:~# perf script
 
 #### 3.3.6 Decoding OpenSBI Trace Data
 
-OpenSBI, as a RISC-V Linux firmware running in M ​​mode, cannot directly access its data in M/S/U modes and therefore cannot be directly parsed.It requires passing the OpenSBI ELF file via the options `-m, --machine-code <file>`  and `--machine-code-base <address>` to assist in parsing.
+OpenSBI, as a RISC-V Linux firmware running in M ​​mode, cannot directly access its data in M/S/U modes and therefore cannot be directly parsed.It requires passing the OpenSBI ELF file via the options `--firmware <file>`  and `--firmware-base <address>` to assist in parsing.
 
 
 ```Bash
-perf script -m ./fw_dynamic.elf --machine-code-base 0x100000000
+perf script --firmware ./fw_dynamic.elf --firmware-base 0x100000000
 ```
 
 #### 3.3.7 Locating Unknown Symbols
@@ -801,7 +788,49 @@ root@k3:~# perf script --show-mmap-events
      671: 00000000001b6a66    48 FUNC    GLOBAL DEFAULT   11 main
   ```
 
-#### 3.3.8 A Simple Example of Multi-Process
+#### 3.3.8 Common reasons for trace decode
+
+- Missing DSO
+  ```TypeScript
+  Warning:
+   RISC-V Nexus Trace: Missing DSO. Use 'perf archive' or debuginfod to export data from the traced system.
+                  Enable CONFIG_PROC_KCORE or use option '-k /path/to/vmlinux' for kernel symbols.
+  ```
+
+  Enable `CONFIG_PROC_KCORE` in Linux menuconfig. If this warning still occurs, check the perf build option and enable `libelf`.
+
+  ```Bash
+  root@k3:~# perf version --build-options
+  perf version 6.18.3.ge93dfda71df6
+                     aio: [ on  ]  # HAVE_AIO_SUPPORT
+                     bpf: [ on  ]  # HAVE_LIBBPF_SUPPORT
+           bpf_skeletons: [ OFF ]  # HAVE_BPF_SKEL
+              debuginfod: [ OFF ]  # HAVE_DEBUGINFOD_SUPPORT
+                   dwarf: [ on  ]  # HAVE_LIBDW_SUPPORT
+      dwarf_getlocations: [ on  ]  # HAVE_LIBDW_SUPPORT
+            dwarf-unwind: [ on  ]  # HAVE_DWARF_UNWIND_SUPPORT
+                auxtrace: [ on  ]  # HAVE_AUXTRACE_SUPPORT
+                  libbfd: [ OFF ]  # HAVE_LIBBFD_SUPPORT ( tip: Deprecated, license incompatibility, use BUILD_NONDISTRO=1 and install binutils-dev[el] )
+          libbpf-strings: [ on  ]  # HAVE_LIBBPF_STRINGS_SUPPORT
+             libcapstone: [ OFF ]  # HAVE_LIBCAPSTONE_SUPPORT
+      libdw-dwarf-unwind: [ on  ]  # HAVE_LIBDW_SUPPORT
+                  libelf: [ on  ]  # HAVE_LIBELF_SUPPORT
+                 libLLVM: [ OFF ]  # HAVE_LIBLLVM_SUPPORT
+                 libnuma: [ on  ]  # HAVE_LIBNUMA_SUPPORT
+              libopencsd: [ OFF ]  # HAVE_CSTRACE_SUPPORT
+                 libperl: [ OFF ]  # HAVE_LIBPERL_SUPPORT ( tip: Deprecated, use LIBPERL=1 and install perl-ExtUtils-Embed/libperl-dev to build with it )
+                 libpfm4: [ on  ]  # HAVE_LIBPFM
+               libpython: [ OFF ]  # HAVE_LIBPYTHON_SUPPORT
+                libslang: [ on  ]  # HAVE_SLANG_SUPPORT
+           libtraceevent: [ on  ]  # HAVE_LIBTRACEEVENT
+               libunwind: [ OFF ]  # HAVE_LIBUNWIND_SUPPORT ( tip: Deprecated, use LIBUNWIND=1 and install libunwind-dev[el] to build with it )
+                    lzma: [ on  ]  # HAVE_LZMA_SUPPORT
+  numa_num_possible_cpus: [ on  ]  # HAVE_LIBNUMA_SUPPORT
+                    zlib: [ on  ]  # HAVE_ZLIB_SUPPORT
+                    zstd: [ on  ]  # HAVE_ZSTD_SUPPORT
+  ```
+
+#### 3.3.9 A Simple Example of Multi-Process
 
 ```Bash
 root@k3:~# cat test_fork.c
@@ -897,7 +926,7 @@ root@k3:~# grep "\/root\/test_fork" test_fork.log -nrI
 ### 4.1 Decoding with the NexRv Tool
 
 ```XML
-liangzhen@snode5:~/bubule$ ./NexRv.exe
+$ ./NexRv.exe
 
 NexRv v1.0.0 (2025/01/02)
 Usage:
@@ -927,7 +956,7 @@ where:
 On K3 devices, RISC-V trace data is routed to the Arm CoreSight sink through the ATB-bridge component.As a result, the trace captured from DDR still contains CoreSight formatter frames. These frames must be stripped before any further processing of the trace data.
 
 ```Bash
-liangzhen@snode5:~/bubule$ ./NexRv.exe -conv -ddr bubule.bin -nex bubule.nex
+$ ./NexRv.exe -conv -ddr bubule.bin -nex bubule.nex
 Converted OK (43 instructions)
 ```
 
@@ -936,25 +965,25 @@ Converted OK (43 instructions)
 After the CoreSight formatter frames have been removed, the resulting Nexus trace stream can be converted into a human-readable Nexus message format.
 
 ```Bash
-liangzhen@snode5:~/bubule$ ./NexRv.exe -dump bubule.nex > bubule.dump
+$ ./NexRv.exe -dump bubule.nex > bubule.dump
 ```
 
 #### 4.1.3 Converting the ELF File into PC Instruction Information
 
 ```Bash
-liangzhen@snode5:~/bubule$ riscv64-unknown-elf-objdump -d bubule.elf > bubule.objd
-liangzhen@snode5:~/bubule$ ./NexRv.exe -conv -objd bubule.objd -pcinfo bubule.pci
+$ riscv64-unknown-elf-objdump -d bubule.elf > bubule.objd
+$ ./NexRv.exe -conv -objd bubule.objd -pcinfo bubule.pci
 ```
 
 #### 4.1.4 Decoding into PC Sequence
 
 ```Bash
-liangzhen@snode5:~/bubule$ ./NexRv.exe -deco bubule.nex -pcinfo bubule.pci -pcout bubule.pco
+$ ./NexRv.exe -deco bubule.nex -pcinfo bubule.pci -pcout bubule.pco
 NexRv/Info: amin=0x100000000, amax=0x1000016FE, nRec=2092
 Stat: 570 bytes, 116 messages, 0 error messages, 4.91 bytes/message, 1756 instr, 2.597 bits/instr
 Decoded OK (1756 instructions)
 
-liangzhen@snode5:~/bubule$ cat bubule.pco
+$ cat bubule.pco
 0x100000098
 0x10000009C
 0x1000000A0
