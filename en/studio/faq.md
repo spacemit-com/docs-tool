@@ -2,127 +2,144 @@
 sidebar_position: 4
 ---
 
-# 常见问题
+# FAQ
 
-## 安装与驱动
+## Installation and Drivers
 
-**Q：首次打开显示"驱动未在运行"？**
+**Q: Why does "Driver is not running" appear the first time launching SpacemiT Studio?**
 
-点击提示后在弹出的驱动安装引导窗口中选择**下载驱动**，下载并安装对应平台的驱动包。详见[快速入门 - 安装驱动](./quick_start.md#安装驱动)。
+Click the prompt, then select **Download Driver** in the driver installation wizard. Download and install the driver package for your platform. For details, see **Quick Start > Install the Driver**.
 
-**Q：驱动安装后仍无法识别设备？**
+**Q: Why isn't my device detected after installing the driver?**
 
-- Windows：检查设备管理器中是否显示黄色感叹号，尝试右键更新驱动或重新安装
-- Linux：确认当前用户具有 USB 设备访问权限（可能需要加入 `dialout` 或 `plugdev` 组）
-- macOS：检查系统安全性与隐私设置中是否允许驱动运行
+- **Windows:** Check Device Manager for any devices with a yellow warning icon. Try updating or reinstalling the driver.
+- **Linux:** Ensure your user account has permission to access USB devices (you may need to join the `dialout` or `plugdev` group).
+- **macOS:** Verify that the driver is allowed to run under **System Settings > Privacy & Security**.
 
-**Q：安装后无法访问 SpacemiT Studio？**
+---
 
-确认系统版本满足最低要求（Windows 10+、Ubuntu 20.04+、macOS 11+），检查浏览器是否为最新版本，确认端口未被其他程序占用。
+## Account and Sign-in
 
-## 账号与登录
+**Q: Why didn't I receive the verification code during registration?**
 
-**Q：注册时收不到验证码？**
+- **Phone registration:** Verify that the phone number is correct and not already registered. Also check whether SMS messages are being blocked.
+- **Email registration:** Check your spam or junk folder and verify that the email address is correct.
 
-- 手机号注册：确认手机号正确且未被占用，检查短信是否被拦截
-- 邮箱注册：检查垃圾邮件文件夹，确认邮箱地址正确
+**Q: I forgot my password. What should I do?**
 
-**Q：忘记密码怎么办？**
+On the sign-in page, click **Forgot Password** and reset your password using your registered phone number or email address.
 
-在登录页面点击**忘记密码**，通过注册时的手机号或邮箱重置密码。
+---
 
-## 设备连接
+## Device Connection
 
-**Q：USB 连接后设备列表为空？**
+**Q: Why is the device list empty after connecting via USB?**
 
-- 确认 USB 线支持数据传输（非仅充电线）
-- 确认设备已上电并进入正确模式
-- Windows 用户检查设备管理器中驱动是否正常
-- 尝试更换 USB 端口或重新插拔设备
+- Ensure the USB cable supports data transfer (not a charging-only cable).
+- Make sure the device is powered on and in the correct mode.
+- On Windows, verify that the device driver is installed correctly in Device Manager.
+- Try a different USB port or reconnect the device.
 
-**Q：SSH 连接超时或失败？**
+**Q: Why does my SSH connection time out or fail?**
 
-- 确认设备与电脑在同一网络（可通过 `ping` 测试连通性）
-- 检查设备端 SSH 服务是否已启动（串口登录后执行 `systemctl status ssh`）
-- 确认 IP 地址、端口（默认 22）、用户名和密码正确
-- 检查防火墙是否阻止了 SSH 端口
+- Make sure the device and host computer are on the same network (use `ping` to verify connectivity).
+- Verify that the SSH service is running on the device (`systemctl status ssh` after logging in through the serial console).
+- Check that the IP address, port (default: 22), username, and password are correct.
+- Ensure that the firewall is not blocking SSH traffic.
 
-**Q：ADB 连接失败？**
+**Q: Why can't I connect using ADB?**
 
-- 确认设备已通过 USB 连接并被识别
-- 检查设备上是否已启用 ADB 调试功能
-- 尝试在终端面板中点击 **ADB** 按钮重新连接
+- Verify that the device is connected via USB and has been detected.
+- Make sure ADB debugging is enabled on the device.
+- Click the **ADB** button in the Terminal panel to reconnect.
 
-## 烧录工具
+---
 
-**Q：烧录中断后如何恢复？**
+## Flashing
 
-重新进入烧录模式，重新选择镜像执行烧录即可。烧录工具会自动覆盖之前未完成的内容。
+**Q: How do I recover from an interrupted flashing process?**
 
-**Q：烧录完成后设备无法启动？**
+Put the device back into flashing mode, select the image again, and restart the flashing process. The tool automatically overwrites any incomplete data.
 
-- 检查镜像是否与设备型号匹配（如 K1 设备不能使用 K3 镜像）
-- 确认镜像下载完整（查看镜像文件大小是否正常）
-- 尝试使用最新版本镜像重新烧录
-- 检查设备硬件是否正常（如电源、存储）
+**Q: Why won't my device boot after flashing?**
 
-**Q：镜像下载失败或中断？**
+- Verify that the image matches your device model (for example, do not flash a K3 image onto a K1 device).
+- Ensure that the image was downloaded completely.
+- Try flashing the latest image.
+- Check that the device hardware (such as the power supply and storage) is functioning properly.
 
-- 检查网络连接是否稳定
-- 尝试切换到其他网络环境重新下载
-- 如多次失败，可手动下载镜像后通过**本地上传**功能导入
+**Q: Why did the image download fail or stop unexpectedly?**
 
-**Q：SD 卡无法识别或格式化失败？**
+- Check that your network connection is stable.
+- Try downloading again from a different network.
+- If the problem persists, download the image manually and import it using **Upload Local Image**.
 
-- 确认 SD 卡已正确插入读卡器
-- 检查 SD 卡容量是否满足镜像大小要求
-- 尝试更换 SD 卡或读卡器
-- Windows 用户可在磁盘管理中查看 SD 卡是否被识别
-- 尝试先在系统中格式化 SD 卡为 FAT32 格式
+**Q: Why do image download requests fail in Firefox on Linux when downloading multiple images simultaneously?**
 
-**Q：分区配置后烧录失败？**
+On Linux, Firefox's HTTP/2 implementation may have compatibility issues with the local service (`https://127.0.0.1`), causing requests to fail when multiple images are downloaded simultaneously.
 
-- 检查分区配置文件格式是否正确
-- 确认分区大小总和不超过设备存储容量
-- 尝试取消勾选**配置分区**，使用默认分区方案
+**Temporary workaround:**
 
-## 终端与文件管理
+1. Enter `about:config` in the Firefox address bar.
+2. Search for `network.http.http2.enabled`.
+3. Set the value to `false`.
+4. Restart Firefox.
 
-**Q：终端连接后无法输入命令？**
+**Q: Why isn't my SD card detected, or why does formatting fail?**
 
-- 检查设备连接状态是否正常（顶部显示为在线）
-- 尝试按 Enter 键唤醒终端
-- 如果是串口终端，尝试重新建立连接
+- Ensure the SD card is properly inserted into the card reader.
+- Verify that the SD card has sufficient capacity for the image.
+- Try another SD card or card reader.
+- On Windows, check whether the SD card appears in **Disk Management**.
+- Try formatting the SD card as FAT32 before flashing.
 
-**Q：文件上传或下载失败？**
+**Q: Why does flashing fail after configuring partitions?**
 
-- 确认设备存储空间充足
-- 检查文件路径权限（可能需要 sudo 权限）
-- 对于大文件，检查网络连接稳定性
-- 尝试分批上传或使用压缩包
+- Verify that the partition configuration file is valid.
+- Ensure that the total partition size does not exceed the device's storage capacity.
+- Clear **Configure Partitions** to use the default partition layout.
 
-**Q：文件管理面板显示为空或无法刷新？**
+---
 
-- 检查设备连接状态
-- 确认当前用户对目标目录具有读取权限
-- 尝试切换到其他目录（如 `/home` 或 `/tmp`）后再返回
+## Terminal and File Management
 
-## 其他
+**Q: Why can't I enter commands after connecting to the terminal?**
 
-**Q：如何切换界面语言？**
+- Verify that the device is online.
+- Press **Enter** to wake up the terminal.
+- If using a serial terminal, reconnect to the device.
 
-点击左下角语言图标或进入**设置 → 语言**切换中文/英文。
+**Q: Why do file uploads or downloads fail?**
 
-**Q：如何清理镜像缓存释放磁盘空间？**
+- Ensure that the device has sufficient storage space.
+- Verify that you have permission to access the target directory (you may need `sudo` privileges).
+- For large files, check that the network connection is stable.
+- Try transferring the files in smaller batches or as a compressed archive.
 
-进入**设置**，点击**镜像目录**或**解压目录**后的**清理**按钮。清理后如需使用须重新下载。
+**Q: Why is the File Manager empty or unable to refresh?**
 
-**Q：多设备同时连接如何切换？**
+- Verify that the device is connected.
+- Ensure that the current user has read permission for the target directory.
+- Try switching to another directory (such as `/home` or `/tmp`) and then switch back.
 
-- 在顶部工具栏的**设备名称下拉框**中选择目标设备
-- 或在**设备管理**页面点击目标设备卡片
+---
 
-**Q：遇到问题无法解决怎么办？**
+## General
 
-- 查看设备的操作记录（设备管理 → 动态页面）获取错误日志
-- 通过顶部工具栏的**意见反馈**提交问题
+**Q: How do I change the display language?**
+
+Click the language icon in the lower-left corner, or go to **Settings > Language** to switch between Chinese and English.
+
+**Q: How do I clear the image cache to free disk space?**
+
+Go to **Settings**, then click **Clear** next to **Image Directory** or **Extraction Directory**. Cleared images must be downloaded again before use.
+
+**Q: How do I switch between multiple connected devices?**
+
+- Select the target device from the **Device** drop-down list in the top toolbar.
+- Or select the target device from the **Device Management** page.
+
+**Q: What should I do if I can't resolve my issue?**
+
+- View the device operation log (**Device Management > Activity**) to collect diagnostic information.
+- Submit feedback using **Feedback** in the top toolbar.

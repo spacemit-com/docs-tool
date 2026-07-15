@@ -6,11 +6,14 @@ sidebar_position: 8
 
 > 注：持续开发中...
 
+
 ## 概述
 
 **SpacemiT AI 助手**是集成于 SpacemiT Studio 中的对话式 AI 开发助手，基于进迭时空文档与预置技能库，支持代码辅助、问题排查与端侧 AI 应用开发。
 
 ![](../static/ai.png)
+
+> 注意：安装驱动后才能使用 AI 助手，否则会报错。
 
 ## 顶部工具栏
 

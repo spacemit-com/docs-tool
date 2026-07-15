@@ -4,7 +4,9 @@ sidebar_position: 8
 
 # SpacemiT AI 助手
 
-> 注：持续开发中...
+> Note: This feature is under continuous development.
+>
+> Important: Install the driver before using the AI Assistant. Otherwise, errors may occur.
 
 ## 概述
 
@@ -50,4 +52,4 @@ AI 助手面板顶部工具栏从左到右依次为：
 - **描述**：技能的功能说明
 - **Prompt**：定义技能行为的系统提示词
 
-填写完成后点击**确认**，即可创建自定义技能。
+After completing the form, click **Confirm** to create a custom skill.
