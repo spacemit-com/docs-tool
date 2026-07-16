@@ -2,44 +2,44 @@
 sidebar_position: 1
 ---
 
-# 产品概述
+# Overview
 
-SpacemiT Studio 是由进迭时空为 RISC-V 平台打造的一站式开发工作台，集成镜像管理、系统烧录、设备管理、终端调试、云端编译、AI 开发和应用部署等能力，支持从系统安装到应用上线的完整开发流程。
+**[SpacemiT Studio](https://studio.spacemit.com/)** is a web-based workbench for the SpacemiT AI CPU development ecosystem. It integrates image management, system flashing, device management, terminal debugging, cloud compilation, AI development, and application deployment, supporting the complete development workflow from system installation to application deployment.
 
-它为 RISC-V 开发提供统一入口，帮助开发者在同一界面中完成设备准备、软件开发和应用部署。
+It provides a unified entry point for RISC-V development, enabling developers to prepare devices, develop software, and deploy applications from a single interface.
 
-## 界面概览
+## Interface Overview
 
-主界面包含导航栏、工具栏、设备区域和工作区，开发者可在同一窗口中完成设备连接、系统管理和调试操作。
-![](./static/home.png)
+The main interface includes the navigation bar, toolbar, device area, and AI workspace, allowing developers to connect devices, manage systems, and perform debugging tasks in a single window.
+![SpacemiT Studio main interface](./static/home.png)
 
-## 适用场景
+## Use Cases
 
-SpacemiT Studio 适用于以下场景：
+SpacemiT Studio is suitable for the following scenarios:
 
-- 系统准备与设备初始化：完成开发板烧录、网络配置和基础环境设置。
-- 日常开发与调试：支持代码编写、编译构建、终端调试和文件同步。
-- AI 应用构建与部署：支持 AI 模型加载、调试和端侧部署。
+- System preparation and device initialization: Flash development boards, configure networks, and set up the basic environment.
+- Day-to-day development and debugging: Write code, build projects, debug through the terminal, and synchronize files.
+- AI application development and deployment: Load and debug AI models, then deploy applications at the edge.
 
-## 核心功能
+## Key Features
 
-### 智能烧录系统
+### Intelligent System Flashing
 
-支持向导式系统安装。连接设备后，工具可自动识别板型并推荐镜像版本，同时提供在线镜像管理、一键烧录，以及预置 SSH 密钥、Wi-Fi 凭证、主机名和用户密码等配置能力，并支持量产卡制作和写号。
+Supports guided system installation. After a device is connected, the tool can automatically identify the board model and recommend an image version. It also provides image management, one-click flashing, and configuration options for SSH keys, Wi-Fi credentials, hostnames, and user passwords. Mass-production card creation and device serial number programming are also supported.
 
-### 一体化开发工作台
+### Integrated Development Workspace
 
-将设备管理、终端工具、文件管理、Web IDE、远程桌面和应用中心整合在同一界面中，减少工具切换。
+Combines device management, terminal tools, file management, a web IDE, remote desktop, and the application center in a single interface, reducing the need to switch between tools.
 
-### 云端开发环境
+### Cloud Development Environment
 
-提供云端编译服务，支持 Makefile、CMake 和 Meson 等构建系统，帮助开发者在不同操作系统上获得一致的开发体验。
+Provides cloud compilation services with support for build systems such as Makefile, CMake, and Meson, helping developers maintain a consistent development experience across operating systems.
 
-### AI 原生开发
+### AI Development
 
-集成 AI 开发助手、RAG 知识库和预置 Skill 能力库，支持 AI 模型部署和端侧应用开发。
+Integrates an AI development assistant, an RAG knowledge base, and a prebuilt skills library to support AI model deployment and edge application development.
 
-## 系统要求
+## System Requirements
 
-支持 Windows 10+、Ubuntu 20.04+ 和 macOS 11+。详细安装说明请参见[快速入门](./quick_start.md)。
+Supports Windows 10+, Ubuntu 20.04+, and macOS 11+. For detailed installation instructions, see [Quick Start](./quick_start.md).
 
