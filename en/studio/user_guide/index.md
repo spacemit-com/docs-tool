@@ -2,13 +2,13 @@
 sidebar_position: 3
 ---
 
-# 用户指南
+# User Guide
 
-- [设备管理](./devices.md)
-- [终端面板](./terminal.md)
-- [开发工具](./dev_tools/index.md)
-- [案例](./cases.md)
-- [云上开发](./cloud.md)
-- [应用中心](./app_store.md)
-- [SpacemiT AI 助手](./ai.md)
-- [设置](./settings.md)
+- [Device Management](./devices.md)
+- [Terminal](./terminal.md)
+- [Development Tools](./dev_tools/index.md)
+- [Examples](./cases.md)
+- [Cloud Development](./cloud.md)
+- [App Center](./app_store.md)
+- [SpacemiT AI Assistant](./ai.md)
+- [Settings](./settings.md)

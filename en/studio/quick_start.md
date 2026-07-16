@@ -2,132 +2,138 @@
 sidebar_position: 2
 ---
 
-# 快速入门
+# Quick Start
 
-本章介绍如何访问 SpacemiT Studio、完成注册、安装驱动以及首次连接设备。
+This section describes how to access SpacemiT Studio, register an account, install the driver, and connect a device for the first time.
 
-## 访问 SpacemiT Studio
+## Access SpacemiT Studio
 
-在浏览器中打开 **[SpacemiT Studio](https://studio.spacemit.com/)**。
+Open **[SpacemiT Studio](https://studio.spacemit.com/)** in a web browser.
 
-Note: You must sign in to access the Studio interface. If you are not signed in, you will be redirected to the login page — sign in with an existing account or register via phone/email before using the Studio.
+> Note: Login to access the main Studio interface. Otherwise, Studio redirects you to the sign-in page.
 
-## 安装驱动
+## Login
 
-首次启动 SpacemiT Studio 时，如果尚未安装驱动，首页显示 **驱动未在运行** 提示：
+### Register an Account
 
-![首页 - 无驱动无设备](./static/initial.png)
+If you do not have an account, you can register with either of the following methods:
 
-点击提示后，将弹出 SpacemiT Studio 的驱动安装引导窗口，提供以下三个操作：
+<img src="./static/register.png" alt="Registration" width="400">
 
-<img src="./static/driver_00.png" alt="驱动安装引导" width="400">
+- Register with a mobile number (currently supports only mobile numbers registered in mainland China)
+- Register with an email address
 
-- **启动驱动**：若驱动已安装但未运行，点击此项可直接启动驱动服务
-- **下载驱动**：若尚未安装驱动，点击此项下载并安装对应平台的驱动包
-- **重试**：驱动操作失败时可重试
+After registration, go to the Login page.
+> You can also login with a third-party account without registering separately.
 
-驱动安装成功后，提示将消失，首页状态恢复为可连接设备的正常状态。
+### Login Methods
 
-![首页 - 驱动已安装](./static/initial_00.png)
+You can login using the following methods:
+<img src="./static/login.png" alt="Login screen" width="400">
 
-> 注：各平台的驱动安装包也可以通过以下链接手动下载并安装。
-> TBD
+- SMS verification code
+- Password
+- Third-party account login (no separate registration required)
+  - WeChat
+  - QQ
+  - GitHub
+  - Gitee
 
+## Driver Installation
 
-## 界面导航
+When you first start SpacemiT Studio, the home page displays a **Driver Not Running** message if the driver is not installed:
 
-![图标](./static/icons.png)
+![Home page with no driver or device](./static/initial.png)
 
-### 左侧导航栏（Sidebar）
+Click the message to open the SpacemiT Studio driver installation wizard, which provides the following options:
 
-左侧导航栏提供所有功能模块的入口，点击图标即可切换页面：
+<img src="./static/driver_00.png" alt="Driver installation wizard" width="400">
 
-| # | 图标名称 | 说明 |
+- **Launch Driver**: Starts the driver service if the driver is installed but not running.
+- **Install Driver**: Downloads and installs the driver package for the current platform if the driver is not installed.
+  <img src="./static/driver_01.png" alt="Driver Download wizard" width="400">
+  - Click **Confirm Download** to download the SpacemiT Studio driver.
+  - To download a driver package manually, click **Go to Download Center**.
+    > ![Driver download links](./static/driver.png)
+    >
+    > - **Windows**: [Download the Windows driver](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Windows)
+    > - **Linux**: [Download the Linux driver](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Linux)
+    > - **macOS**: [Download the macOS driver](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Darwin)
+- **Retry**: Retries the operation if a driver operation fails.
+
+After the driver is installed successfully, the message disappears and the home page returns to its normal state, ready to connect a device.
+
+![Home page with driver installed](./static/initial_00.png)
+
+## Interface Navigation
+
+![Navigation and toolbar icons](./static/icons.png)
+
+### Left Navigation Bar (Sidebar)
+
+The left navigation bar provides access to all feature modules. Click an icon to switch pages:
+
+| # | Icon | Description |
 |------|------|------|
-| 1 | **[设备管理](./user_guide/devices.md)** | 查看已连接设备的状态与基本信息，默认首页 |
-| 2 | **[终端面板](./user_guide/terminal.md)** | SSH / 串口终端，支持多标签管理 |
-| 3 | **[开发工具](./user_guide/dev_tools/index.md)** | 系统烧录、SD 卡制作、系统预配置等工具 |
-| 4 | **[案例开发](./user_guide/cases.md)** | 官方示例工程，一键部署到设备 |
-| 5 | **[云上开发](./user_guide/cloud.md)** | 云端编译环境，无需本地配置交叉编译工具链 |
-| 6 | **[应用中心](./user_guide/app_store.md)** | 生态应用的浏览与安装 |
+| 1 | **[Devices](./user_guide/devices.md)** | View the status and basic information of connected devices. This page is the SpacemiT Studio homepage by default. |
+| 2 | **[Terminal](./user_guide/terminal.md)** | SSH and serial terminals with multi-tab support. |
+| 3 | **[Development Tools](./user_guide/dev_tools/index.md)** | Tools for system flashing, SD card creation, system preconfiguration, and more. |
+| 4 | **[Case Development](./user_guide/cases.md)** | Sample projects provided by SpacemiT. Deploy a project to a device with one click. |
+| 5 | **[Cloud Development](./user_guide/cloud.md)** | Cloud-based build environment that does not require a locally configured cross-compilation toolchain. |
+| 6 | **[App Center](./user_guide/app_store.md)** | Browse and install ecosystem applications. |
 
-底部提供三个全局设置：
+The following global settings are available at the bottom of the navigation bar:
 
-| # | 图标名称 | 说明 |
+| # | Icon | Description |
 |------|------|------|
-| 7 | **[登录](#登录)** | 用户账号登录入口 |
-| 8 | **语言** | 切换界面显示语言，支持中文 / 英文 |
-| 9 | **[设置](./user_guide/settings.md)** | 打开应用设置 |
+| 7 | **User** | View and edit your user profile. |
+| 8 | **Language** | Select the interface language. Chinese and English are supported. |
+| 9 | **[Settings](./user_guide/settings.md)** | Open application settings. |
 
-#### 登录
+### Top Toolbar
 
-**注册账号**
-
-如果还没有账号，点击 **登录** 进入注册流程。
-
-当前平台支持以下注册方式：
-
-- 手机号注册（目前仅支持中国国内手机号）
-  <img src="./static/reg_phone.png" alt="手机号注册" width="400">
-
-- 邮箱注册
-  <img src="./static/reg_email.png" alt="邮箱注册" width="400">
-
-注册完成后，点击 **立即登录** 进入登录页面。
-
-平台支持以下登录方式：
-
-- 短信登录
-- 密码登录
-
-  <img src="./static/login.png" alt="登录界面" width="400">
-
-### 顶部工具栏（Topbar）
-
-| # | 图标名称 | 说明 |
+| # | Icon | Description |
 |------|------|------|
-| 10 | **设备名称下拉框** | 显示当前活跃设备，点击可切换已连接的其他设备 |
-| 11 | **状态指示** | 实时显示设备在线 / 离线状态 |
-| 12 | **＋ [新设备](./user_guide/devices.md#新设备)** | 添加新设备连接（USB / SSH） |
-| 13 | **刷新** | 刷新当前设备列表 |
-| 14 | **收起侧栏** | 隐藏 / 显示左侧导航栏 |
-| 15 | **收起 AI 面板** | 隐藏 / 显示右侧 AI 助手面板 |
-| 16 | **文件** | 跳转至进迭时空的官方文档中心 |
-| 17 | **意见反馈** | 打开反馈弹窗，提交问题、建议或异常日志 |
+| 10 | **Device Name Drop-Down** | Displays the active device. Click to switch to another connected device. |
+| 11 | **Status Indicator** | Shows the device's online status in real time. |
+| 12 | **+ [New Device](./user_guide/devices.md#new-device)** | Add a device connection over USB or SSH. |
+| 13 | **Refresh** | Refresh the current device list. |
+| 14 | **Collapse Sidebar** | Hide or show the left navigation bar. |
+| 15 | **Collapse AI Panel** | Hide or show the AI assistant panel on the right. |
+| 16 | **Documentation** | Open the user guide. |
+| 17 | **[Feedback](#feedback)** | Open the feedback dialog to submit issues, suggestions, or error logs. |
 
-#### 意见反馈
+#### Feedback
 
-点击 **意见反馈** 后，将弹出反馈窗口：
+Click **Feedback** to open the feedback dialog:
 
-- 在“问题描述”文本框中输入您遇到的问题或改进建议，最多 1000 字
-- 点击“上传截图”区域选择图片文件，或将图片拖拽到该区域上传
-- 支持 JPG / PNG / WebP / GIF 格式，单张不超过 10MB，最多上传 5 张
-- 点击下方的 **截图** 按钮，可直接截取当前屏幕并上传
-- 输入联系方式（邮箱 / 手机号），便于客服回复
+- Enter the issue or improvement suggestion in the **Description** field, up to 1,000 characters.
+- Click the **Images** area to select image files locally.
+- Click Screenshot icon to capture and upload the current screen.
 
-提交后，系统会自动收集当前版本号和设备信息，帮助加快问题定位。
+After you submit feedback, the system automatically collects the current version and device information to help diagnose the issue.
 
-反馈成功后，页面会显示“提交成功”提示。
+After submission, the page displays a **Submitted Successfully** message.
 
-> 如果提交失败，请检查网络状况后重试。
+> If submission fails, check your network connection and try again.
 
-![](./static/feedback.png)
+![Feedback dialog](./static/feedback.png)
 
-## 连接设备
+## Connect a Device
 
-SpacemiT Studio 支持以下开发板连接方式：
+SpacemiT Studio supports the following development board connection methods:
 
-| 连接方式 | 适用场景 | 说明 |
+| Connection Method | Use Case | Description |
 |---------|---------|------|
-| USB | 烧录、本地调试 | 免配置，即插即用 |
-| SSH | 远程开发、文件同步 | 需设备已联网 |
+| USB | Flashing and local debugging | Plug and play; no configuration required. |
+| SSH | Remote development and file synchronization | The device must be connected to a network. |
 
-连接成功后，设备将出现在顶部工具栏的设备下拉列表中，首页也会同步显示其详细信息：
+After a connection is established, the device appears in the device drop-down list on the top toolbar, and the home page displays its details:
 
-![首页 - 设备已连接](./static/initial_01.png)
+![Home page with a connected device](./static/initial_01.png)
 
-## 下一步
+## Next Steps
 
-- [设备管理](./user_guide/devices.md) — 了解设备的详细管理功能
-- [终端面板](./user_guide/terminal.md) — 开始使用终端调试
-- [开发工具](./user_guide/dev_tools/index.md) — 系统烧录与镜像管理
+- [Device Management](./user_guide/devices.md) - Learn about detailed device management capabilities.
+- [Terminal](./user_guide/terminal.md) - Start terminal debugging.
+- [Development Tools](./user_guide/dev_tools/index.md) - Flash a system image and manage images.

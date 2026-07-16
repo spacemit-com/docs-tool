@@ -18,11 +18,10 @@ sidebar_position: 2
 
 如果还没有账号，请按照以下步骤注册。当前平台支持以下注册方式：
 
-- 手机号注册（目前仅支持中国国内手机号）
-  <img src="./static/reg_phone.png" alt="手机号注册" width="400">
+<img src="./static/register.png" alt="手机号注册" width="400">
 
+- 手机号注册（目前仅支持中国国内手机号）
 - 邮箱注册
-  <img src="./static/reg_email.png" alt="邮箱注册" width="400">
 
 注册完成后，进入登录页面。
 > 若不注册，可使用第三方账号直接关联登录
@@ -52,19 +51,19 @@ sidebar_position: 2
 
 - **启动驱动**：若驱动已安装但未运行，点击此项可直接启动驱动服务
 - **下载驱动**：若尚未安装驱动，点击此项下载并安装对应平台的驱动包
+  <img src="./static/driver_01.png" alt="驱动下载引导" width="400">
+  - 点击 **确认下载** 下载 SpacemiT Studio 驱动
+  - 如需手动下载驱动安装包，点击 **前往下载中心**
+    > ![驱动下载链接](./static/driver.png)
+    >
+    > - **Windows 版本**：[下载 Windows 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Windows)
+    > - **Linux 版本**：[下载 Linux 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Linux)
+    > - **macOS 版本**：[下载 macOS 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Darwin)
 - **重试**：驱动操作失败时可重试
 
 驱动安装成功后，提示将消失，首页状态恢复为可连接设备的正常状态。
 
 ![首页 - 驱动已安装](./static/initial_00.png)
-
-> 注：各平台的驱动安装包也可以通过以下链接手动下载并安装：
->
-> ![驱动下载链接](./static/driver.png)
->
-> - **Windows 版本**：[下载 Windows 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Windows)
-> - **Linux 版本**：[下载 Linux 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Linux)
-> - **macOS 版本**：[下载 macOS 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Darwin)
 
 ## 界面导航
 
