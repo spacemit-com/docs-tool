@@ -10,7 +10,16 @@ sidebar_position: 4
 
 Click the prompt, then select **Download Driver** in the driver installation wizard. Download and install the driver package for your platform. For details, see **Quick Start > Install the Driver**.
 
-**Q: Why isn't my device detected after installing the driver?**
+**Q: Why does "Driver is not running" appear after installing the driver?**
+
+First, check the browser permission settings:
+
+1. Click the **lock icon** or **connection security** button to the left of the address bar
+2. In the pop-up menu, find **Site settings** or **Permissions**
+3. Verify that the **"Applications on device"** permission is enabled (toggle is blue)
+4. Refresh the page
+
+If the problem persists:
 
 - **Windows:** Check Device Manager for any devices with a yellow warning icon. Try updating or reinstalling the driver.
 - **Linux:** Ensure your user account has permission to access USB devices (you may need to join the `dialout` or `plugdev` group).
