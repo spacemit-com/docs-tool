@@ -2,12 +2,11 @@
 sidebar_position: 6
 ---
 
-# 云上开发
+# Cloud Development
 
-> 注：持续开发中...
+> Note: This feature is under development.
 
-## 概述
+## Overview
 
-云上开发提供远程编译和构建服务，开发者无需在本地搭建 RISC-V 交叉编译环境，即可完成代码的编译、构建和部署。
-
+Cloud Development provides remote compilation and build services. Code can be compiled, built, and deployed without setting up a local RISC-V cross-compilation environment.
 

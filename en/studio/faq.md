@@ -6,9 +6,24 @@ sidebar_position: 4
 
 ## Installation and Drivers
 
-**Q: Why does "Driver is not running" appear the first time launching SpacemiT Studio?**
+**Q: Why does "Service not started" appear when SpacemiT Studio is first launched?**
 
-Click the prompt, then select **Download Driver** in the driver installation wizard. Download and install the driver package for your platform. For details, see **Quick Start > Install the Driver**.
+Click the message, then select **Download & install driver** in the driver installation wizard. Download and install the driver package for the current platform. For details, see [Quick Start: Driver Installation](./quick_start.md#driver-installation).
+
+**Q: Why does "Service not started" still appear after installing the driver?**
+
+![SpacemiT Studio displays the Service not started message](./static/driver_faq_00.png)
+
+In Chrome, this issue occurs when the **"Apps on device"** permission is disabled. Enable the permission as follows:
+
+1. Click the **site information icon** to the left of the address bar
+   ![Chrome site information menu with Apps on device disabled](./static/driver_faq_01.png)
+2. In the pop-up menu, find the **"Apps on device"** permission item
+3. Toggle the switch to **enabled** (blue)
+   ![Chrome site information menu with Apps on device enabled](./static/driver_faq_02.png)
+4. Refresh the page to reconnect Studio to the device-side application
+
+If the permission item is not displayed, click **Site settings** to open the detailed permissions page.
 
 **Q: Why isn't my device detected after installing the driver?**
 
@@ -59,12 +74,12 @@ On the sign-in page, click **Forgot Password** and reset your password using you
 
 **Q: How do I recover from an interrupted flashing process?**
 
-Put the device back into flashing mode, select the image again, and restart the flashing process. The tool automatically overwrites any incomplete data.
+Put the device back into flashing mode, select the image again, and restart the flashing process. Restarting the flashing process overwrites incomplete data from the previous attempt.
 
 **Q: Why won't my device boot after flashing?**
 
 - Verify that the image matches your device model (for example, do not flash a K3 image onto a K1 device).
-- Ensure that the image was downloaded completely.
+- Ensure that the image download completed successfully.
 - Try flashing the latest image.
 - Check that the device hardware (such as the power supply and storage) is functioning properly.
 
@@ -82,7 +97,7 @@ On Linux, Firefox's HTTP/2 implementation may have compatibility issues with the
 
 1. Enter `about:config` in the Firefox address bar.
 2. Search for `network.http.http2.enabled`.
-3. Set the value to `false`.
+3. Set the preference to `false`.
 4. Restart Firefox.
 
 **Q: Why isn't my SD card detected, or why does formatting fail?**
@@ -132,7 +147,7 @@ Click the language icon in the lower-left corner, or go to **Settings > Language
 
 **Q: How do I clear the image cache to free disk space?**
 
-Go to **Settings**, then click **Clear** next to **Image Directory** or **Extraction Directory**. Cleared images must be downloaded again before use.
+Go to **Settings**, then click **Clear** next to **Image Directory** or **Extraction Directory**. Any cleared images must be downloaded again before they can be used.
 
 **Q: How do I switch between multiple connected devices?**
 

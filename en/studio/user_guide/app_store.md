@@ -2,10 +2,10 @@
 sidebar_position: 7
 ---
 
-# 应用中心
+# App Center
 
-> 注：持续开发中...
+> Note: This feature is under development.
 
-## 概述
+## Overview
 
-应用中心提供适配 SpacemiT 平台的应用和工具的浏览、安装与管理功能。
+App Center provides browsing, installation, and management of applications and tools for the SpacemiT platform.

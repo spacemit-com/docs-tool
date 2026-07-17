@@ -1,9 +1,9 @@
 {
-  "label": "用户指南",
+  "label": "User Guide",
   "position": 3,
   "collapsed": false,
   "link": {
     "type": "generated-index",
-    "description": "SpacemiT Studio 各功能模块的详细使用说明"
+    "description": "Detailed instructions for each SpacemiT Studio feature module"
   }
 }
