@@ -81,7 +81,7 @@ The left navigation bar provides access to all feature modules. Click an icon to
 | 1 | **[Devices](./user_guide/devices.md)** | View the status and basic information of connected devices. This page is the SpacemiT Studio homepage by default. |
 | 2 | **[Terminal](./user_guide/terminal.md)** | SSH and serial terminals with multi-tab support. |
 | 3 | **[Development Tools](./user_guide/dev_tools/index.md)** | Tools for system flashing, SD card creation, system preconfiguration, and more. |
-| 4 | **[Case Development](./user_guide/cases.md)** | Sample projects provided by SpacemiT. Deploy a project to a device with one click. |
+| 4 | **[Development Cases](./user_guide/cases.md)** | Sample projects provided by SpacemiT. Deploy a project to a device with one click. |
 | 5 | **[Cloud Development](./user_guide/cloud.md)** | Cloud-based build environment that does not require a locally configured cross-compilation toolchain. |
 | 6 | **[App Center](./user_guide/app_store.md)** | Browse and install ecosystem applications. |
 

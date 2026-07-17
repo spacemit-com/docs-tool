@@ -2,40 +2,40 @@
 sidebar_position: 9
 ---
 
-# 设置
+# Settings
 
-点击 ⚙️ 图标进入设置页面，可管理 SpacemiT Studio 的外观、缓存、AI 模型及远程网关等配置。
+Click the ⚙️ icon to open the Settings page, where the appearance, cache, AI models, and remote gateway for SpacemiT Studio can be configured.
 
-![](../static/setting_00.png)
+![Settings page](../static/setting_00.png)
 
-## 外观
+## Appearance
 
-- **主题模式**：切换亮色 / 深色主题。
-- **语言**：切换界面语言（中文 / 英文）。
+- **Theme Mode**: Switches between light and dark themes.
+- **Language**: Switches the interface language (Chinese/English).
 
-## 缓存管理
+## Cache Management
 
-- **缓存目录**：点击**修改**更改默认下载与存储路径，建议设为非系统盘。
-- **镜像目录**：点击**清理**删除已下载的原始镜像文件，清理后如需使用须重新下载。
-- **解压目录**：点击**清理**删除已解压的文件，清理前请确认相关项目不再依赖该目录。
+- **Cache Directory**: Click **Change** to modify the default download and storage path. A non-system drive is recommended.
+- **Image Directory**: Click **Clear** to delete downloaded raw image files. Deleted image files must be downloaded again before use.
+- **Extraction Directory**: Click **Clear** to delete extracted files. Before clearing, verify that no active projects still depend on this directory.
 
-## AI 设置
+## AI Settings
 
-- **添加模型**：点击 **+ 添加模型**，填写以下信息后点击**确定**：
-  ![](../static/setting_02.png)
-  - **名称**：自定义的模型显示名称。
-  - **提供方**：模型服务商（如 OpenAI、字节跳动等）。
-  - **API Key**：用于鉴权的密钥。
-  - **模型 ID**：实际调用的模型标识符（如 `gpt-4o`、`doubao-seed-1-6`）。
-  - **最大 Token**：单次请求允许的最大 Token 数，留空则使用服务商默认值。
+- **Add Model**: Click **+ Add Model**, fill in the following information, then click **OK**:
+  ![Add model dialog](../static/setting_02.png)
+  - **Name**: A custom display name for the model.
+  - **Provider**: The model service provider (such as OpenAI or ByteDance).
+  - **API Key**: The key used for authentication.
+  - **Model ID**: The identifier used to invoke the model (such as `gpt-4o` or `doubao-seed-1-6`).
+  - **Max Tokens**: The maximum number of tokens allowed per request. Leave blank to use the provider's default value.
 
-## 远程网关
+## Remote Gateway
 
-- **关闭（默认）**：直连本地驱动，适用于本机开发调试。
-- **开启**：启用后需填写以下信息并点击**测试并保存**：
-  - **网关地址**：远程网关的访问地址。
-  ![](../static/setting_01.png)
+- **Disabled (default)**: Connects directly to the local driver. Suitable for local development and debugging.
+- **Enabled**: When enabled, fill in the following information and click **Test & Save**:
+  - **Gateway Address**: The address of the remote gateway.
+  ![Remote gateway settings](../static/setting_01.png)
 
-## 关于
+## About
 
-显示 SpacemiT Studio 当前软件版本信息。
+Displays the current SpacemiT Studio version.

@@ -60,9 +60,9 @@ After a device is connected successfully, the following information is available
 
 The bottom of the device panel provides shortcut buttons for common operations:
 
-- **[Terminal](./terminal.md#终端会话)**: Opens a terminal session for the device
-- **[Files](./terminal.md#文件管理)**: Opens device file management
-- **[Serial Connection](./dev_tools/system_tools.md#串口连接)**: Communicates with the device over a serial connection for low-level debugging and log viewing
+- **[Terminal](./terminal.md#terminal-sessions)**: Opens a terminal session for the device
+- **[Files](./terminal.md#file-management)**: Opens device file management
+- **[Serial Connection](./dev_tools/system_tools.md#serial-connection)**: Communicates with the device over a serial connection for low-level debugging and log viewing
 - **Remote Desktop**: Accesses the device graphical interface through VNC/RDP
   ![](../static/remote.png) 
 - **IDE**: Opens the device integrated development environment in Studio

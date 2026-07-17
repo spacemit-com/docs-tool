@@ -2,54 +2,63 @@
 sidebar_position: 8
 ---
 
-# SpacemiT AI 助手
+# SpacemiT AI Assistant
 
-> Note: This feature is under continuous development.
+> Note: This feature is under development.
 >
 > Important: Install the driver before using the AI Assistant. Otherwise, errors may occur.
 
-## 概述
+## Overview
 
-**SpacemiT AI 助手**是集成于 SpacemiT Studio 中的对话式 AI 开发助手，基于进迭时空文档与预置技能库，支持代码辅助、问题排查与端侧 AI 应用开发。
+The **SpacemiT AI Assistant** is a conversational AI development assistant integrated into SpacemiT Studio. Built on SpacemiT documentation and a preset skill library, it supports code assistance, troubleshooting, and edge AI application development.
 
-![](../static/ai.png)
+![SpacemiT AI Assistant panel](../static/ai.png)
 
-## 顶部工具栏
+## Toolbar
 
-![](../static/ai_00.png)
+![AI Assistant toolbar](../static/ai_00.png)
 
-AI 助手面板顶部工具栏从左到右依次为：
+The toolbar at the top of the AI Assistant panel provides the following actions, from left to right:
 
-- **[技能管理](#技能管理)**：管理已安装的 AI 技能（Skill），可启用、禁用或添加新技能
-- **新建会话**：创建一个全新的对话会话
-- **会话记录**：查看历史会话列表，可切换回之前的对话
-- **清空对话**：清除当前会话中的所有消息
-- **收起面板**：隐藏 AI 助手面板
+- **[Skills](#skills)**: Manages installed AI skills. Skills can be enabled, disabled, or added.
+- **New Session** (**+**): Starts a new conversation session.
+- **Session History**: Displays the list of previous sessions. Select a session to resume it.
+- **Clear Conversation**: Clears all messages in the current session.
+- **Collapse Panel**: Hides the AI Assistant panel.
 
-## 技能管理
+## Skills
 
-![](../static/ai_01.png)
+![Skills screen](../static/ai_01.png)
 
-技能（Skill）是 AI 助手的功能扩展模块，每个技能对应特定的知识库或任务能力。技能管理界面提供以下功能：
+A skill is a functional extension module for the AI Assistant. Each skill corresponds to a specific knowledge base or task capability. The Skills screen shows the following:
 
-- **技能列表**：显示已安装的技能，包括技能名称和描述
-- **启用/禁用**：每个技能右侧有开关，可按需开启或关闭
-- **搜索**：顶部搜索框可按名称快速筛选技能
+- **Total**, **Enabled**, and **Built-in** counts.
+- A card for each skill, showing its name, tags (such as **Built-in** or **All Tools**), a description, and an enable/disable toggle.
+- An **Edit** link on each card to modify the skill.
 
-### 技能商店
+Built-in skills include:
 
-![](../static/ai_02.png)
+- **Basic Persona**: Enabled by default. Defines the AI assistant's core identity and behavior guidelines.
+- **Flashing Expert Enhancement**: When enabled, strengthens guidance and error analysis for flashing-related tasks.
+- **Read-only Mode**: When enabled, restricts the AI assistant to read-only operations and blocks any action that would change device state.
 
-点击**技能商店**后打开可用技能列表，展示所有可安装的技能卡片。每张卡片显示技能名称、简介及安装按钮，支持按分类筛选和关键词搜索。
+### Skill Store
 
-### 新建技能
+![Skill Store dialog](../static/ai_02.png)
 
-![](../static/ai_03.png)
+Click **Skill Store** to open the list of available skills, displayed as installable skill cards. Each card shows the skill name, version, tags, a description, and an **Add to Local** button. The skill list can be filtered by category and searched by keyword.
 
-点击**新建技能**后弹出创建表单，可填写以下信息：
+Example skills available in the Skill Store include **Flashing Assistant**, **Device Diagnostics Expert**, **File Manager**, and **Performance Monitor**.
 
-- **技能名称**：技能的唯一标识名称
-- **描述**：技能的功能说明
-- **Prompt**：定义技能行为的系统提示词
+### Create a New Skill
 
-After completing the form, click **Confirm** to create a custom skill.
+![New Skill dialog](../static/ai_03.png)
+
+Click **New Skill** to open the skill creation form, which includes the following fields:
+
+- **Name**: The unique identifier for the skill.
+- **Description**: A description of the skill's functionality.
+- **System Prompt**: The system prompt that defines the AI's persona, behavior, and response style for the skill.
+- **Tool Permissions**: Choose **All Tools** to grant the skill access to every available tool, or **Whitelist** to restrict it to a selected subset.
+
+After completing the form, click **Save** to create the custom skill, or **Cancel** to discard it.

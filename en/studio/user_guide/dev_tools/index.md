@@ -2,14 +2,14 @@
 sidebar_position: 3
 ---
 
-# 开发工具
+# Development Tools
 
-开发工具页面提供烧录和系统管理两大类工具，覆盖从镜像写入到设备配置的常用操作。
+The Development Tools page provides two categories of tools: Flash Tools and System Tools. These tools support common operations from image writing to device configuration.
 
-![开发工具页面](../../static/tool_00.png)
+![Development Tools page](../../static/tool_00.png)
 
-- [烧录工具](./flash.md)：
-  单机烧录、SD 卡启动、SD 卡量产
+- [Flash Tools](./flash.md):
+  DFU flashing, SD card boot, and SD card mass production
 
-- [系统工具](./system_tools.md)
-  系统预配置、端口转发、串口连接
+- [System Tools](./system_tools.md)
+  System preconfiguration, port forwarding, and serial connection

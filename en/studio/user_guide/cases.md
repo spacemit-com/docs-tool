@@ -2,22 +2,22 @@
 sidebar_position: 5
 ---
 
-# 案例
+# Development Cases
 
-> 注：持续增加更多案例中...
+> Note: Additional examples are being added.
 
-## 概述
+## Overview
 
-案例页面提供预置的示例工程和应用开发参考，帮助开发者快速了解 SpacemiT 平台能力并上手开发。
+This page provides preconfigured sample projects and application-development references to help developers quickly understand SpacemiT platform capabilities and begin development.
 
-进入 **案例开发** 页面后，可以看到预置的示例卡片（如 **Hello SpacemiT**），每个卡片会标注适用的系统类型（如 C）与设备系列（如 K1）。
+It displays preconfigured example cards, such as **Hello SpacemiT**. Each card identifies the applicable system type, such as C, and device series, such as K1.
 
-![案例列表](../static/cases.png)
+![Example list](../static/cases.png)
 
-点击案例卡片进入详情页，页面会展示该案例的说明、源码内容、编译命令与运行命令。点击右上角 **推送到设备并打开 IDE**，会将示例源码推送到所选设备的指定目录（如 `/opt/devprojects/hello-spacemit`），并在浏览器中打开设备上已安装的在线 Code Server。
+Select a case card to open its details page, which displays the example description, source code, build command, and run command. Select **Push to Device & Open IDE** in the upper-right corner to push the example source code to the specified directory on the selected device, such as `/opt/devprojects/hello-spacemit`, and open the Code Server installed on the device in the browser.
 
-![案例详情](../static/cases_01.png)
+![Example details](../static/cases_01.png)
 
-推送完成后，会自动打开在线 IDE，可以在文件浏览器中看到已推送的项目文件（如 `hello.c`、`README.md`）。在内置终端中执行编译与运行命令后，即可直接在设备上查看输出结果，无需手动传输代码或额外配置开发环境。
+After the source code is pushed, the online IDE opens automatically. The pushed project files, such as `hello.c` and `README.md`, are available in the file explorer. Run the build and run commands in the integrated terminal to view output directly on the device, without manually transferring code or configuring an additional development environment.
 
-![设备端在线 IDE](../static/cases_02.png)
+![Online IDE on the device](../static/cases_02.png)

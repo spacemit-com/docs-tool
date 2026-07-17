@@ -2,86 +2,85 @@
 sidebar_position: 2
 ---
 
-# 系统工具
+# System Tools
 
-## 系统预配置
+## System Preconfiguration
 
-无屏幕首启初始化工具，可在设备首次启动前预设系统参数，无需连接显示器和键盘即可完成基础配置。
+A headless initialization tool that presets system parameters before the device's first boot. Basic configuration can be completed without a monitor or keyboard.
 
-### 操作步骤
+### Procedure
 
-1. 进入 **开发工具 → 系统预配置**
+1. Go to **Development Tools → System Preconfiguration**.
 
-   ![系统预配置入口](../../static/systool_preconfig_00.png)
+   ![System Preconfiguration entry](../../static/systool_preconfig_00.png)
 
-2. 填写需要预设的配置项
+2. Specify the configuration fields to preset:
 
-   ![系统预配置配置项](../../static/systool_preconfig_01.png)
+   ![System Preconfiguration fields](../../static/systool_preconfig_01.png)
 
-   - **用户名 / 密码**：设置系统登录账号。
-   - **主机名**：自定义设备名称，留空则自动生成。
-   - **语言 / 时区**：系统显示语言与时区，时区默认为 UTC。
-   - **WiFi**：可选，填写 SSID 和密码（支持 WPA/WPA2-PSK），设备首次启动时自动连接。
+   - **Username / Password**: Sets the system login credentials.
+   - **Hostname**: A custom device name. If left blank, the hostname is generated automatically.
+   - **Language / Timezone**: The system display language and timezone. The timezone defaults to UTC.
+   - **WiFi**: Optional. Enter the SSID and password (WPA/WPA2-PSK supported) to connect automatically on first boot.
 
-3. 点击 **推送并执行**，配置将写入已连接的设备，首次启动时自动应用
+3. Click **Push and Run**. The configuration is written to the connected device and applied automatically on first boot.
 
-## 端口转发
+## Port Forwarding
 
-将设备端口映射到本地，方便通过本机浏览器或工具访问设备上运行的服务。
+Maps a device port to the local machine, enabling access to services running on the device from a local browser or tool.
 
-### 使用场景
+### Use Cases
 
-- 访问设备上的 Web 服务（如 HTTP/HTTPS 应用）
-- 调试设备上的 Node.js、Flask 等开发服务
-- 连接设备上的 Jupyter、MySQL、Redis 等服务
+- Accessing web services on the device (such as HTTP/HTTPS applications)
+- Debugging development services on the device, such as Node.js or Flask
+- Connecting to services on the device, such as Jupyter, MySQL, or Redis
 
-### 端口转发 — 操作步骤
+### Port Forwarding Procedure
 
-1. 确保设备已连接并在**当前设备**面板中显示
-2. 进入 **开发工具 → 端口转发**
+1. Ensure the device is connected and appears in the **Current Device** panel.
+2. Go to **Development Tools → Port Forward**.
 
-   ![端口转发入口](../../static/systool_mapping_00.png)
+   ![Port Forwarding entry](../../static/systool_mapping_00.png)
 
-3. 在**新建转发**面板中填写转发规则：
+3. Fill in the forwarding rule in the **New Forward** panel:
 
-   ![新建转发](../../static/systool_mapping_01.png)
+   ![New Forward panel](../../static/systool_mapping_01.png)
 
-   - **远程端口**：设备上要转发的端口号（如 8080）。
-   - **本地端口**：映射到本机的端口号，留空则自动分配。
-     也可点击常用端口快捷标签直接填入：HTTP (80)、HTTPS (443)、SSH (22)、Node.js (3000)、Flask (5000)、Jupyter (8888)、MySQL (3306)、Redis (6379)
+    - **Remote Port**: The device port number to forward (for example, 8080).
+    - **Local Port**: The local port number to map. If left blank, a port is assigned automatically.
+       Common ports can also be selected using shortcut tags: HTTP (80), HTTPS (443), SSH (22), Node.js (3000), Flask (5000), Jupyter (8888), MySQL (3306), and Redis (6379).
 
-4. 点击 **建立转发**
+4. Click **Create Forward**.
 
-   ![建立转发](../../static/systool_mapping_02.png)
+   ![Create Forward](../../static/systool_mapping_02.png)
 
-5. 转发建立后显示在右侧**活跃转发**列表中，通过 `localhost:<本地端口>` 访问设备服务
+5. After the forward is created, it appears in the **Active Forwards** list on the right. Access the device service at `localhost:<local port>`.
 
-   ![活跃转发列表](../../static/systool_mapping_03.png)
+   ![Active Forwards list](../../static/systool_mapping_03.png)
 
-## 串口连接
+## Serial Connection
 
-通过串口与设备进行通信,实现命令行交互和系统调试。
+Enables command-line interaction and system debugging through a serial connection to the device.
 
-### 使用场景
+### Serial Connection Use Cases
 
-- 设备启动日志查看和系统调试
-- 无网络环境下的设备控制
-- Bootloader 交互和底层系统配置
-- 嵌入式开发和驱动调试
+- Viewing device boot logs and performing system debugging
+- Controlling the device in environments without network access
+- Bootloader interaction and low-level system configuration
+- Embedded development and driver debugging
 
-### 操作步骤
+### Serial Connection Procedure
 
-1. 确保设备已通过串口连接到计算机
-2. 进入 **开发工具 → 串口连接**
+1. Ensure the device is connected to the computer over a serial connection.
+2. Go to **Development Tools → Serial Connection**.
 
-   ![串口连接入口](../../static/systool_serial_00.png)
+   ![Serial Connection entry](../../static/systool_serial_00.png)
 
-3. 配置串口参数：
+3. Configure the serial parameters:
 
-   ![设置串口参数](../../static/systool_serial_01.png)
+   ![Configure serial parameters](../../static/systool_serial_01.png)
 
-   - **串口**：选择设备对应的串口号（如 COM3、/dev/ttyUSB0）
-   - **波特率**：设置通信速率，常用值为 115200
+   - **Serial Port**: Select the serial port corresponding to the device (for example, COM3 or /dev/ttyUSB0).
+   - **Baud Rate**: Sets the communication speed. The common value is 115200.
 
-4. 点击 **连接**，成功后即可在终端窗口中与设备交互
-
+4. Click **Connect**. After the connection is established, interact with the device through the terminal window.

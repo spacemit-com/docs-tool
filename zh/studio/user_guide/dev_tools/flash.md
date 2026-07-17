@@ -58,7 +58,7 @@ sidebar_position: 1
 
    ![下载中](../../static/flash_3_1.png)
 
-   下载完成后，关闭镜像库窗口：
+   下载完成：
 
    ![下载完成](../../static/flash_3_2.png)
 
