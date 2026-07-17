@@ -26,10 +26,14 @@ sidebar_position: 1
 
 ### 连接前
 
-未连接设备时，首页显示空状态或者设备离线状态（以前连接过的设备）：
+未连接设备时，首页显示空状态
 
-![未连接设备](../static/initial.png)
-![未连接设备](../static/initial_00.png)
+![未连接设备](../static/device.png)
+
+或者设备离线状态（以前连接过的设备）：
+
+![设备离线](../static/device_04.png)
+
 
 ### 连接成功
 

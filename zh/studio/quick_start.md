@@ -41,7 +41,7 @@ sidebar_position: 2
 
 ## 安装驱动
 
-首次启动 SpacemiT Studio 时，如果尚未安装驱动，首页显示 **驱动未在运行** 提示：
+首次启动 SpacemiT Studio 时，如果尚未安装驱动，首页显示 **服务未启动** 提示：
 
 ![首页 - 无驱动无设备](./static/initial.png)
 
@@ -50,16 +50,20 @@ sidebar_position: 2
 <img src="./static/driver_00.png" alt="驱动安装引导" width="400">
 
 - **启动驱动**：若驱动已安装但未运行，点击此项可直接启动驱动服务
-- **下载驱动**：若尚未安装驱动，点击此项下载并安装对应平台的驱动包
-  <img src="./static/driver_01.png" alt="驱动下载引导" width="400">
-  - 点击 **确认下载** 下载 SpacemiT Studio 驱动
+
+- **下载并安装驱动**：若尚未安装驱动，点击此项下载并安装对应平台的驱动包
+  - 点击 **下载** 可直接下载 SpacemiT Studio Windows 驱动
+  - 若是安装 macOS/Linux 驱动，推荐直接拷贝命令执行即可
+    <img src="./static/driver_01.png" alt="驱动下载引导" width="400">
+
   - 如需手动下载驱动安装包，点击 **前往下载中心**
-    > ![驱动下载链接](./static/driver.png)
-    >
-    > - **Windows 版本**：[下载 Windows 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Windows)
-    > - **Linux 版本**：[下载 Linux 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Linux)
-    > - **macOS 版本**：[下载 macOS 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Darwin)
-- **重试**：驱动操作失败时可重试
+    ![驱动下载链接](./static/driver.png)
+
+    | 平台 | 下载 |
+    | --- | --- |
+    | Windows | [下载 Windows 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Windows) |
+    | Linux | [下载 Linux 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Linux) |
+    | macOS | [下载 macOS 驱动](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Darwin) |
 
 驱动安装成功后，提示将消失，首页状态恢复为可连接设备的正常状态。
 

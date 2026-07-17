@@ -41,7 +41,7 @@ You can login using the following methods:
 
 ## Driver Installation
 
-When you first start SpacemiT Studio, the home page displays a **Driver Not Running** message if the driver is not installed:
+When you first start SpacemiT Studio, the home page displays a **Service not started** message if the driver is not installed:
 
 ![Home page with no driver or device](./static/initial.png)
 
@@ -50,16 +50,19 @@ Click the message to open the SpacemiT Studio driver installation wizard, which 
 <img src="./static/driver_00.png" alt="Driver installation wizard" width="400">
 
 - **Launch Driver**: Starts the driver service if the driver is installed but not running.
-- **Install Driver**: Downloads and installs the driver package for the current platform if the driver is not installed.
-  <img src="./static/driver_01.png" alt="Driver Download wizard" width="400">
-  - Click **Confirm Download** to download the SpacemiT Studio driver.
+- **Download & install driver**: Downloads and installs the driver package for the current platform if the driver is not installed.
+  - Click **Download** to download the SpacemiT Studio Windows driver.
+  - For macOS/Linux driver installation, copy and run the displayed command.
+    <img src="./static/driver_01.png" alt="Driver download wizard" width="400">
+
   - To download a driver package manually, click **Go to Download Center**.
-    > ![Driver download links](./static/driver.png)
-    >
-    > - **Windows**: [Download the Windows driver](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Windows)
-    > - **Linux**: [Download the Linux driver](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Linux)
-    > - **macOS**: [Download the macOS driver](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Darwin)
-- **Retry**: Retries the operation if a driver operation fails.
+    ![Driver download links](./static/driver.png)
+
+    | Platform | Download |
+    | --- | --- |
+    | Windows | [Download the Windows driver](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Windows) |
+    | Linux | [Download the Linux driver](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Linux) |
+    | macOS | [Download the macOS driver](https://www.spacemit.com/community/resources-download/Tools/SpacemiT%20Studio/Darwin) |
 
 After the driver is installed successfully, the message disappears and the home page returns to its normal state, ready to connect a device.
 

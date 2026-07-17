@@ -2,37 +2,39 @@
 sidebar_position: 2
 ---
 
-# 终端面板
+# Terminal
 
-终端面板提供集成的命令行环境，支持通过 SSH 或串口与设备交互，无需切换到外部终端工具。
+The Terminal panel provides an integrated command-line environment for interacting with devices over SSH or a serial connection, without switching to an external terminal application.
+
+> Note: A device must be connected.
 
 ![](../static/terminal_00.png)
 
-## 文件管理
+## File Management
 
-左侧的文件管理面板提供设备文件系统浏览能力。
+The File Management panel on the left provides access to the device file system.
 
 ![](../static/terminal_03.png)
 
-面板顶部工具栏提供常用操作按钮，包括刷新目录、新建文件夹、上传文件、下载文件等。在文件或目录上右键可弹出上下文菜单，提供以下操作：
+The toolbar at the top of the panel provides common actions, including refreshing directories, creating folders, uploading files, and downloading files. Right-click a file or directory to open a context menu with the following actions:
 
-- **刷新**：刷新当前目录
-- **新建文件夹**：在当前目录下新建文件夹
-- **新建文件**：在当前目录下新建文件
-- **下载**：将所选文件下载到本地
+- **Refresh**: Refreshes the current directory.
+- **New Folder**: Creates a folder in the current directory.
+- **Upload**: Creates a file in the current directory.
+- **Download**: Downloads the selected file to the local system.
 
-## 终端会话
+## Terminal Sessions
 
-右侧的终端会话区域提供命令行环境，支持多标签，每个标签对应一个独立会话。
+The Terminal Sessions area on the right provides a command-line environment with multi-tab support. Each tab corresponds to an independent session.
 
-### 工具栏
+### Toolbar
 
-终端顶部工具栏包含以下操作：
+The terminal toolbar provides the following actions:
 
-- **+**：新建终端标签
-- **ADB**：通过 ADB 协议连接设备，打开调试 shell
-- **SSH**：通过 SSH 连接设备，打开远程终端。点击后弹出配置窗口，填写 SSH 端口、用户名、密码 后即可连接
-  ![设置SSH参数](../static/terminal_01.png)
-- **打开串口**：打开串口终端，用于查看启动日志和底层调试。点击后弹出配置窗口，选择串口设备并设置波特率等参数后连接
-  ![设置串口参数](../static/systool_serial_01.png)
-- **全屏**：将终端区域切换为全屏模式
+- **+**: Creates a new terminal tab.
+- **SSH**: Connects to the device over SSH and opens a remote terminal. Select this option to open the configuration dialog, then enter the SSH port, username, and password to connect.
+  ![Configure SSH parameters](../static/terminal_01.png)
+- **ADB**: Connects to the device through the ADB protocol and opens a debugging shell.
+- **Open Serial**: Opens a serial terminal for viewing boot logs and performing low-level debugging. Select this option to open the configuration dialog, choose a serial device, configure the baud rate and other parameters, then connect.
+  ![Configure serial parameters](../static/systool_serial_01.png)
+- **FullScreen**: Switches the terminal area to full-screen mode.
