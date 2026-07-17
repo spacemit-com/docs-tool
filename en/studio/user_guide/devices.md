@@ -2,87 +2,90 @@
 sidebar_position: 1
 ---
 
-# 设备管理
+# Device Management
 
-## 概述
+## Overview
 
-设备管理面板用于统一管理所有已连接的开发板，支持多设备同时接入、状态监控和快速切换。
+The Device Management panel centrally manages all connected development boards. It supports simultaneous connection of multiple devices, status monitoring, and quick switching.
 
-## 支持设备
+## Supported Devices
 
-| 系列 | 型号 |
+| Series | Models |
 |------|------|
 | K1 | MUSE Pi Pro、MUSE Pi、MUSE Book、MUSE Paper |
 | K3 | CoM260 Kit、Pico-ITX |
 
-## 设备连接
+## Device Connection
 
-支持以下方式接入设备：
+The following connection methods are supported:
 
-| 连接方式 | 适用场景 | 说明 |
+| Connection Method | Use Case | Description |
 |---------|---------|------|
-| USB | 烧录、本地调试 | 通过 USB 线直连，免配置 |
-| SSH | 日常开发、文件同步 | 通过网络远程连接，需设备已联网 |
+| USB | Flashing and local debugging | Direct USB cable connection; no configuration required |
+| SSH | Daily development and file synchronization | Remote network connection; the device must be connected to a network |
 
-### 连接前
+### Before Connection
 
-未连接设备时，首页显示空状态或者设备离线状态（以前连接过的设备）：
+When no device is connected, the home page displays an empty state:
 
-![未连接设备](../static/initial.png)
-![未连接设备](../static/initial_00.png)
+![No device connected](../static/device.png)
 
-### 连接成功
+Alternatively, a device that was previously connected may be displayed as offline:
 
-设备连接成功后，首页将显示当前设备的详细信息：
+![Device offline](../static/device_04.png)
 
-![设备已连接](../static/initial_01.png)
+### Successful Connection
 
-## 设备操作
+After a device is connected successfully, the home page displays detailed information about the current device:
 
-![设备操作面板](../static/device_00.png)
+![Device connected](../static/initial_01.png)
 
-### 设备信息
+## Device Operations
 
-连接成功后可查看以下信息：
+![Device operations panel](../static/device_00.png)
 
-- 设备系列与序列号
-- 当前已安装的系统（如 Bianbu）
-- 设备连接方式（如 ADB）
-- 在线 / 离线状态
-- CPU 使用率（实时）
-- 内存使用量 / 总量
-- 存储使用量 / 总量
+### Device Information
 
-### 快捷操作
+After a device is connected successfully, the following information is available:
 
-设备面板底部提供常用操作快捷按钮：
+- Device series and serial number
+- Currently installed operating system, such as Bianbu
+- Device connection method, such as ADB
+- Online/offline status
+- CPU utilization, in real time
+- Used memory / total memory
+- Used storage / total storage
 
-- **[终端](./terminal.md#终端会话)**：打开设备终端会话
-- **[文件](./terminal.md#文件管理)**：进入设备文件管理
-- **[串口连接](./dev_tools/system_tools.md#串口连接)**：通过串口与设备通信，用于底层调试和日志查看
-- **远程桌面**：通过 VNC/RDP 访问设备图形界面
+### Quick Actions
+
+The bottom of the device panel provides shortcut buttons for common operations:
+
+- **[Terminal](./terminal.md#终端会话)**: Opens a terminal session for the device
+- **[Files](./terminal.md#文件管理)**: Opens device file management
+- **[Serial Connection](./dev_tools/system_tools.md#串口连接)**: Communicates with the device over a serial connection for low-level debugging and log viewing
+- **Remote Desktop**: Accesses the device graphical interface through VNC/RDP
   ![](../static/remote.png) 
-- **IDE**：在 Studio 内打开设备的集成开发环境
+- **IDE**: Opens the device integrated development environment in Studio
   ![IDE](../static/ide.png) 
 
-### 重命名设备
+### Rename Device
 
-支持对已连接设备自定义命名，便于多设备管理时区分：
+Connected devices can be assigned custom names to distinguish them when managing multiple devices:
 
-![重命名设备](../static/device_01.png)  
+![Rename device](../static/device_01.png)
 
-### 新设备
+### New Device
 
-如需增加新设备，可点击 **+新设备** 按键，在弹出的"连接您的设备"窗口中按步骤完成本地设备连接。
-窗口底部切换可选择连接方式 USB 或 SSH。
+To add a device, click **+ New Device** and follow the steps in the **Connect Your Device** dialog to connect a local device.
+At the bottom of the dialog, select either USB or SSH as the connection method.
 
-![新设备](../static/device_03.png)  
+![New device](../static/device_03.png)
 
-## 动态
+## Activity
 
-动态页面汇总两类信息：
+The Activity page consolidates two types of information:
 
-![动态页面](../static/device_02.png)  
+![Activity page](../static/device_02.png)
 
-- **操作记录**：当前设备的历史操作日志，包含固件包名称、操作方式、执行时间及成功/失败状态。点击右上角 **查看全部** 可展开完整历史记录
-- **最新动态**：平台推送的更新资讯
+- **Operation Log**: Historical operation logs for the current device, including package name, operation method, execution time, and success/failure status. Click **View All** in the upper-right corner to expand the complete history.
+- **Latest News**: Platform-provided update information
