@@ -16,12 +16,23 @@ The File Management panel on the left provides access to the device file system.
 
 ![](../static/terminal_03.png)
 
-The toolbar at the top of the panel provides common actions, including refreshing directories, creating folders, uploading files, and downloading files. Right-click a file or directory to open a context menu with the following actions:
+### Toolbar
+
+The toolbar at the top of the panel provides common action buttons:
 
 - **Refresh**: Refreshes the current directory.
 - **New Folder**: Creates a folder in the current directory.
-- **Upload**: Creates a file in the current directory.
+- **Upload**: Uploads a local file to the current directory.
 - **Download**: Downloads the selected file to the local system.
+
+### Context Menu
+
+Right-click a file or directory to open a context menu with the following actions:
+
+- **Copy Path**: Copies the path of the selected file or folder.
+- **Open in Terminal**: Opens a new terminal session at the selected directory location.
+- **Rename**: Renames the selected file or folder.
+- **Delete**: Deletes the selected file or folder.
 
 ## Terminal Sessions
 
