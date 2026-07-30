@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # 设置
 
-点击 ⚙️ 图标进入设置页面，可管理 SpacemiT Studio 的外观、缓存、AI 模型及远程网关等配置。
+点击 ⚙️ 图标进入设置页面，可管理 SpacemiT Studio 的外观、缓存、AI 模型及远程设备共享等配置。
 
 ![](../static/setting_00.png)
 
@@ -29,16 +29,16 @@ sidebar_position: 9
   - **模型 ID**：实际调用的模型标识符（如 `gpt-4o`、`doubao-seed-1-6`）。
   - **最大 Token**：单次请求允许的最大 Token 数，留空则使用服务商默认值。
 
-## 远程网关
+## 远程设备共享
 
-远程网关功能允许用户远程访问其他电脑上的 SpacemiT Studio。
+远程设备共享功能允许用户远程访问其他电脑上的 SpacemiT Studio。
 
-![远程网关设置](../static/setting_01.png)
+![远程设备共享设置](../static/setting_01.png)
 
 - **关闭（默认）**：仅访问本地设备
 - **开启**：启用后可远程访问相同账号下其他电脑上的 Studio 和已连接设备
 
-> 使用远程网关前，需在主机端电脑的[开发工具 -> 远程访问](./dev_tools/remote_access.md)页面启动代理服务。
+> 使用远程设备共享前，需在主机端电脑的[开发工具 -> 远程访问](./dev_tools/remote_access.md)页面启动代理服务。
 
 ## 关于
 

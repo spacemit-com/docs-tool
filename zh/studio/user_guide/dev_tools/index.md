@@ -14,5 +14,5 @@ sidebar_position: 3
 - [系统工具](./system_tools.md)：
   系统预配置、端口转发、串口连接
 
-- [远程网关](./remote_access.md)：
+- [远程设备共享](./remote_access.md)：
   通过 P2Proxy 网关实现跨网络访问设备

@@ -14,5 +14,5 @@ The Development Tools page provides three categories of tools: Flash Tools, Syst
 - [System Tools](./system_tools.md):
   System preconfiguration, port forwarding, and serial connection
 
-- [Remote Gateway](./remote_access.md):
+- [Remote Device Sharing](./remote_access.md):
   Cross-network device access through P2Proxy gateway

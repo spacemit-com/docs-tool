@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # Settings
 
-Click the ⚙️ icon to open the Settings page, where the appearance, cache, AI models, and remote gateway for SpacemiT Studio can be configured.
+Click the ⚙️ icon to open the Settings page, where the appearance, cache, AI models, and Remote Device Sharing for SpacemiT Studio can be configured.
 
 ![Settings page](../static/setting_00.png)
 
@@ -29,16 +29,16 @@ Click the ⚙️ icon to open the Settings page, where the appearance, cache, AI
   - **Model ID**: The identifier used to invoke the model (such as `gpt-4o` or `doubao-seed-1-6`).
   - **Max Tokens**: The maximum number of tokens allowed per request. Leave blank to use the provider's default value.
 
-## Remote Gateway
+## Remote Device Sharing
 
-The Remote Gateway feature allows users to remotely access SpacemiT Studio on other computers.
+The Remote Device Sharing feature allows users to remotely access SpacemiT Studio on other computers.
 
-![Remote gateway settings](../static/setting_01.png)
+![Remote Device Sharing settings](../static/setting_01.png)
 
 - **Disabled (default)**: Access local devices only
 - **Enabled**: When enabled, allows remote access to Studio and connected devices on other computers under the same account
 
-> Before using the Remote Gateway, the proxy service must be started on the host computer from the [Development Tools -> Remote Access](./dev_tools/remote_access.md) page.
+> Before using the Remote Device Sharing, the proxy service must be started on the host computer from the [Development Tools -> Remote Access](./dev_tools/remote_access.md) page.
 
 ## About
 
