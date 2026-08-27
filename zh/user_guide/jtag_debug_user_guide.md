@@ -16,7 +16,7 @@ K1/K3 系列板子都内置了 JTAG 调试功能，要使其正常工作，需�
 ### 2.1 配置硬件
 
 - **步骤一**：打开 J-Link 的外壳，将其中的跳线帽拔下，使得 J-Link 不对外供电。
-- **步骤二**：连接 JTAG 信号，检查引脚是否被使用，K1请参考文档 [MUSE Pi 用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi/pi_user_guide.md) 中 **JTAG 调试接口** 信息。
+- **步骤二**：连接 JTAG 信号，检查引脚是否被使用，K1请参考文档 [K1 MUSE Pi Pro 用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi_pro/pi_pro_user_guide.md) 中 **JTAG 调试接口** 信息。
   K3请参考参考文档 [K3 硬件方案 FAQ](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/key_stone/k3/k3_hw/k3_hw_faq.md) 中 **开发调试** 信息。
 
 ### 2.2 配置 USB 驱动
