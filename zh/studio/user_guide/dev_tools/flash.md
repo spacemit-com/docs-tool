@@ -18,12 +18,12 @@ sidebar_position: 1
 
 | 系列 | 型号 | 进入刷机模式参考 |
 | ---- | ----------- | -------------------- |
-| K1 | MUSE Pi Pro | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi_pro/pi_pro_user_guide.md) |
-| K1 | MUSE Pi | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi/pi_user_guide.md) |
-| K1 | MUSE Book | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_book/book_user_guide.md) |
-| K1 | MUSE Paper | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_paper/paper_user_guide.md) |
-| K3 | CoM260 Kit | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k3_com260/com260_user_guide.md) |
-| K3 | Pico-ITX | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k3_pico/root_overview.md) |
+| K1 | MUSE Pi Pro | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=ecohardware/k1_series/k1_muse_pi_pro/pi_pro_user_guide.md) |
+| K1 | MUSE Pi | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=ecohardware/k1_series/k1_muse_pi/pi_user_guide.md) |
+| K1 | MUSE Book | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=ecohardware/k1_series/k1_muse_book/book_user_guide.md) |
+| K1 | MUSE Paper | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=ecohardware/k1_series/k1_muse_paper/paper_user_guide.md) |
+| K3 | CoM260 Kit | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=ecohardware/k3_series/k3_com260/com260_user_guide.md) |
+| K3 | Pico-ITX | [用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=ecohardware/k3_series/k3_pico/root_overview.md) |
 
 ### 单机烧录 - 操作步骤
 

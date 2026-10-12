@@ -18,12 +18,12 @@ The procedure for entering flashing mode differs by model. Refer to the applicab
 
 | Series | Model | User Guide |
 | ---- | ----------- | -------------------- |
-| K1 | MUSE Pi Pro | [User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k1_muse_pi_pro/pi_pro_user_guide.md) |
-| K1 | MUSE Pi | [User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k1_muse_pi/pi_user_guide.md) |
-| K1 | MUSE Book | [User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k1_muse_book/book_user_guide.md) |
-| K1 | MUSE Paper | [User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k1_muse_paper/paper_user_guide.md) |
-| K3 | CoM260 Kit | [User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k3_com260/com260_user_guide.md) |
-| K3 | Pico-ITX | [User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k3_pico/root_overview.md) |
+| K1 | MUSE Pi Pro | [User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=ecohardware/k1_series/k1_muse_pi_pro/pi_pro_user_guide.md) |
+| K1 | MUSE Pi | [User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=ecohardware/k1_series/k1_muse_pi/pi_user_guide.md) |
+| K1 | MUSE Book | [User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=ecohardware/k1_series/k1_muse_book/book_user_guide.md) |
+| K1 | MUSE Paper | [User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=ecohardware/k1_series/k1_muse_paper/paper_user_guide.md) |
+| K3 | CoM260 Kit | [User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=ecohardware/k3_series/k3_com260/com260_user_guide.md) |
+| K3 | Pico-ITX | [User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=ecohardware/k3_series/k3_pico/root_overview.md) |
 
 ### Procedure
 
